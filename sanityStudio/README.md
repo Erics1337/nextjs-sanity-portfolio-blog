@@ -9,3 +9,6 @@ Now you can do the following things:
 - [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
 - [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
 - [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+
+# Started from this tutorial
+https://www.youtube.com/watch?v=B1sXeodBLj4&list=PLtisOZsxayjEqUb5OnOqRn5q7OFms6ElV&index=1
