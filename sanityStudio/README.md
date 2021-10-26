@@ -12,3 +12,9 @@ Now you can do the following things:
 
 # Started from this tutorial
 https://www.youtube.com/watch?v=B1sXeodBLj4&list=PLtisOZsxayjEqUb5OnOqRn5q7OFms6ElV&index=1
+
+# Commands
++ cd next-portfolio-blog
+  + npm run dev
++ cd sanitystudio 
+  + sanity start

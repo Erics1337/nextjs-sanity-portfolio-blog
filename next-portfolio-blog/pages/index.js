@@ -22,33 +22,7 @@ export default function Home({ posts }) {
   
   const router = useRouter()
 
-  // mapped array of posts that weve created and set inside of state
-  const [mappedPosts, setMappedPosts] = useState([])
 
-  useEffect(() => {
-    // If no posts set it to empty array
-    if (posts.length) {
-        // ImageBuilder function
-        const imgBuilder = imageUrlBuilder({
-          projectId: 'ulqdo09f',
-          dataset: 'production'
-      })
-
-      setMappedPosts(
-        posts.map(post => {
-          return {
-            ...post,
-            // All images will be same width and height
-            mainImage: imgBuilder.image(post.mainImage).width(500).height(250)
-          }
-        })
-      )
-    } else {
-      setMappedPosts([])
-    }
-  }, [posts])
-
-  console.log(posts)
   return (
     <div>
       <Toolbar open={open} setOpen={setOpen}/>
@@ -74,13 +48,13 @@ export const getServerSideProps = async pageContext => {
   if (!result.result || !result.result.length) {
     return {
       props: {
-        posts: [],
+        projects: [],
       }
     }
   } else {
     return {
       props: {
-        posts: result.result,
+        projects: result.result,
       }
     }
   }
