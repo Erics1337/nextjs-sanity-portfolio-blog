@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react';
 import styles from '../../styles/Post.module.css'
 import Toolbar from '../../components/toolbar'
+import router from 'next/router';
 
-export const Project = ({ title, body, image }) => {
+export const Project = ({ title, body, image, link }) => {
     const [imageUrl, setImageUrl] = useState('')
 
     useEffect(() => {
@@ -23,9 +24,9 @@ export const Project = ({ title, body, image }) => {
         <div>
             <Toolbar />
             <div className={styles.main}>
-                <h1>{title}</h1>
+                <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
                 {/* If image exists in state then display it */}
-                {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
+                {imageUrl && <img className={styles.mainImage} src={imageUrl} onClick={() => router.push(`${link}`)}/>}
                 <div className={styles.body}>
                     <BlockContent blocks={body} />
                 </div>
@@ -61,6 +62,7 @@ export const getServerSideProps = async pageContext => {
                 body: project.body,
                 title: project.title,
                 image: project.mainImage,
+                link: project.link,
             }
         }
     }

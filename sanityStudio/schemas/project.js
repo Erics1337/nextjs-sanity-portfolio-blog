@@ -32,6 +32,11 @@ export default {
         },
       },
       {
+        name: 'link',
+        title: 'External Web Link',
+        type: 'url',
+      },
+      {
         name: 'categories',
         title: 'Categories',
         type: 'array',

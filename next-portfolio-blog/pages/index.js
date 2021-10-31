@@ -3,9 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Toolbar from '../components/Toolbar'
 import Hero from '../components/Hero'
-import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import WhoAmI from '../components/WhoAmI';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
@@ -17,12 +15,8 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 
 
-export default function Home({ posts }) {
-
+export default function Home({ projects }) {
   const [open, setOpen] = useState(false);
-  
-  const router = useRouter()
-
 
   return (
     <div>
@@ -30,7 +24,7 @@ export default function Home({ posts }) {
       <Hero />
       <WhoAmI />
       <Services />
-      <Portfolio />
+      <Portfolio projects={projects}/>
       <Clients />
       <Experience />
       <Statistics />
@@ -60,5 +54,4 @@ export const getServerSideProps = async pageContext => {
       }
     }
   }
-
 }

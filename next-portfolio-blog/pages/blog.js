@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import Toolbar from '../components/Toolbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
+
+// Used for links router.push
 import { useRouter } from 'next/router'
 
 export default function Blog({ posts }) {
@@ -75,5 +77,4 @@ export const getServerSideProps = async pageContext => {
       }
     }
   }
-
 }
