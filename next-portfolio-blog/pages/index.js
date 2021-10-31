@@ -14,6 +14,7 @@ import Experience from '../components/Experience';
 import Statistics from '../components/Statistics';
 import Blog from '../components/Blog';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact';
 
 
 export default function Home({ posts }) {
@@ -34,6 +35,7 @@ export default function Home({ posts }) {
       <Experience />
       <Statistics />
       <Blog />
+      <Contact />
       <Footer />
     </div>
   )

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Toolbar from '../components/toolbar'
+import Toolbar from './toolbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -54,6 +54,7 @@ export default function Projects({ projects }) {
   )
 }
 
+export default Projects
 
 // export const getServerSideProps = async pageContext => {
 //   const query = encodeURIComponent(`*[ _type == "project" ]`)

@@ -1,6 +1,6 @@
 function Blog() {
     return (
-        <div>
+        <section>
             <div className="bg-grey-50"
      id="blog">
     <div className="container py-16 md:py-20">
@@ -14,7 +14,7 @@ function Blog() {
              className="w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10 pt-12">
             <a href="/post"
                className="shadow">
-                <div style={{backgroundImage: "url(/img/post-01.png);"}}
+                <div style={{backgroundImage: "url(/img/post-01.png)"}}
                      className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group">
                     <span
                           className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
@@ -31,7 +31,7 @@ function Blog() {
             </a>
             <a href="/post"
                className="shadow">
-                <div style={{backgroundImage: "url(/img/post-02.png);"}}
+                <div style={{backgroundImage: "url(/img/post-02.png)"}}
                      className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group">
                     <span
                           className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
@@ -48,7 +48,7 @@ function Blog() {
             </a>
             <a href="/post"
                className="shadow">
-                <div style={{backgroundImage: "url(/img/post-03.png);"}}
+                <div style={{backgroundImage: "url(/img/post-03.png)"}}
                      className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group">
                     <span
                           className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
@@ -66,7 +66,7 @@ function Blog() {
         </div>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

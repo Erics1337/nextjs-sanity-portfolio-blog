@@ -37,3 +37,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 1. Added to package.json
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.19",
+
+
+# Uses
++ Sanity CMS
++ Node.js
++ NodeMailer
++ Atom front end template

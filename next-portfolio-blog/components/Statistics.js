@@ -1,6 +1,6 @@
 function Statistics() {
     return (
-        <div>
+        <section>
             <div className="bg-top bg-cover bg-no-repeat pb-16 md:py-16 lg:py-24"
      style={{backgroundImage:"url(img/experience-figure.png)"}}
      id="statistics">
@@ -80,7 +80,7 @@ function Statistics() {
         </div>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

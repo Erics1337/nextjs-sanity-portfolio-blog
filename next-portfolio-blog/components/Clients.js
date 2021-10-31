@@ -1,6 +1,6 @@
 function Clients() {
     return (
-        <div>
+        <section>
             <div className="bg-grey-50"
      id="clients">
     <div className="container py-16 md:py-20">
@@ -42,7 +42,7 @@ function Clients() {
         </div>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

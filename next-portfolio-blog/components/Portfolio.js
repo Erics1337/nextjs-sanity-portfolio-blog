@@ -1,6 +1,6 @@
 function Portfolio() {
     return (
-        <div>
+        <section>
             <div className="container py-16 md:py-20"
      id="portfolio">
     <h2
@@ -38,7 +38,7 @@ function Portfolio() {
         </a>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

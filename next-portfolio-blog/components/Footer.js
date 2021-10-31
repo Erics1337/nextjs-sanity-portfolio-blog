@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div>
+        <section>
                         <div className="bg-primary">
     <div className="container py-6 flex flex-col sm:flex-row justify-between">
         <p className="font-body text-white text-center md:text-left">© Copyright
@@ -34,7 +34,7 @@ function Footer() {
         </div>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,7 +1,7 @@
 function Services() {
     return (
-        <div>
-            <div className="container py-16 md:py-20"
+        <section>
+            <div className="container py-16 md:py-20 mx-auto"
      id="services">
     <h2
         className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
@@ -141,7 +141,7 @@ function Services() {
 
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 

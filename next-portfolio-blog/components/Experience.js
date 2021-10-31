@@ -1,6 +1,6 @@
 function Experience() {
     return (
-        <div>
+        <section>
             <div className="container py-16 md:py-20"
      id="work">
     <h2
@@ -118,7 +118,7 @@ function Experience() {
         </div>
     </div>
 </div>
-        </div>
+        </section>
     )
 }
 
