@@ -1,3 +1,5 @@
+import ServiceBlock from "./ServiceBlock";
+
 function Services() {
   return (
     <section>
@@ -10,147 +12,13 @@ function Services() {
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10 md:pt-12">
+          <ServiceBlock image='icon-development' title='WEB DEVELOPMENT' body='Professional website and web application production' />
+          <ServiceBlock image='icon-content' title='TECHNICAL WRITING' body='Super awesome documentation' />
+          <ServiceBlock image='icon-mobile' title='Mobile Development' body='Android and iOS applications using React Native' />
+          <ServiceBlock image='icon-email' title='Email Marketing' body='Solid marketing tools to help you build your campaign' />
+          <ServiceBlock image='icon-design' title='Graphic Design' body='Custom illustration and icon design' />
+          <ServiceBlock image='icon-graphics' title='Web Design' body='Customized site design to match you and your companies aesthetic and mission' />
 
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img
-                  src="/img/icon-development-white.svg"
-                  alt="development icon"
-                />
-              </div>
-              <div className="block group-hover:hidden">
-                <img
-                  src="/img/icon-development-black.svg"
-                  alt="development icon"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                WEB DEVELOPMENT
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img
-                  src="/img/icon-content-white.svg"
-                  alt="content marketing icon"
-                />
-              </div>
-              <div className="block group-hover:hidden">
-                <img
-                  src="/img/icon-content-black.svg"
-                  alt="content marketing icon"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                Technical Writing
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img
-                  src="/img/icon-mobile-white.svg"
-                  alt="Mobile Application icon"
-                />
-              </div>
-              <div className="block group-hover:hidden">
-                <img
-                  src="/img/icon-mobile-black.svg"
-                  alt="Mobile Application icon"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                Mobile Development
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img
-                  src="/img/icon-email-white.svg"
-                  alt="Email Marketing icon"
-                />
-              </div>
-              <div className="block group-hover:hidden">
-                <img
-                  src="/img/icon-email-black.svg"
-                  alt="Email Marketing icon"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                Email Development
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img src="/img/icon-design-white.svg" alt="Theme Design icon" />
-              </div>
-              <div className="block group-hover:hidden">
-                <img src="/img/icon-design-black.svg" alt="Theme Design icon" />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                Graphic Design
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div className="shadow px-8 py-12 hover:bg-primary group rounded">
-            <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
-              <div className="hidden group-hover:block">
-                <img
-                  src="/img/icon-graphics-white.svg"
-                  alt="Graphic Design icon"
-                />
-              </div>
-              <div className="block group-hover:hidden">
-                <img
-                  src="/img/icon-graphics-black.svg"
-                  alt="Graphic Design icon"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow">
-                Web Design
-              </h3>
-              <p className="text-sm md:text-base text-grey pt-4 group-hover:text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
