@@ -2,8 +2,8 @@ import Timeline from "./Timeline";
 
 function Experience() {
   return (
-    <section>
-      <div className="container py-16 md:py-20" id="work">
+    <section id="experience">
+      <div className="container py-16 md:py-20">
         <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
           My work and education experience
         </h2>

@@ -1,57 +1,91 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Toolbar from '../components/Toolbar'
-import Hero from '../components/Hero'
-import { useState, useEffect } from 'react'
-import WhoAmI from '../components/WhoAmI';
-import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
-import Clients from '../components/Clients';
-import Experience from '../components/Experience';
-import Statistics from '../components/Statistics';
-import Blog from '../components/Blog';
-import Footer from '../components/Footer';
-import Contact from '../components/Contact';
+import Head from "next/head"
+import Image from "next/image"
+import styles from "../styles/Home.module.css"
+import { useState, useEffect } from "react"
+import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
+import About from "../components/About"
+import Services from "../components/Services"
+import Portfolio from "../components/Projects"
+import Clients from "../components/Clients"
+import Experience from "../components/Experience"
+import Statistics from "../components/Statistics"
+import BlogPosts from "../components/BlogPosts"
+import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 
+export default function Home({ projects, posts }) {
+  const [open, setOpen] = useState(false)
+  const [showButton, setShowButton] = useState(false)
 
-export default function Home({ projects }) {
-  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true)
+      } else {
+        setShowButton(false)
+      }
+    })
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
 
   return (
     <div>
-      <Toolbar open={open} setOpen={setOpen}/>
+      {showButton && (
+
+        <button onClick={scrollToTop}
+        className="fixed bottom-20 right-20 z-20 bg-transparent hover:bg-primary text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  &#8679;
+
+      </button>
+      )}
+      <Navbar open={open} setOpen={setOpen} />
       <Hero />
-      <WhoAmI />
+      <About />
       <Services />
-      <Portfolio projects={projects}/>
-      <Clients />
+      <Portfolio projects={projects} />
+      {/* <Clients /> */}
       <Experience />
       <Statistics />
-      <Blog />
+      <BlogPosts posts={posts} />
       <Contact />
       <Footer />
     </div>
   )
 }
 
+export const getServerSideProps = async (pageContext) => {
+  const query1 = encodeURIComponent(`*[ _type == "project" ]`)
+  const url1 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query1}`
+  const projects = await fetch(url1).then((res) => res.json())
 
-export const getServerSideProps = async pageContext => {
-  const query = encodeURIComponent(`*[ _type == "project" ]`)
-  const url = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query}`
-  const result = await fetch(url).then(res => res.json())
+  const query2 = encodeURIComponent(
+    `*[ _type == "post" ]{title, slug, body, mainImage{asset->{_id,url},alt}}`
+  )
+  const url2 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query2}`
+  const posts = await fetch(url2).then((res) => res.json())
 
-  if (!result.result || !result.result.length) {
+  if (
+    !projects.result ||
+    !projects.result.length ||
+    !posts.result ||
+    !posts.result.length
+  ) {
     return {
       props: {
         projects: [],
-      }
+        posts: [],
+      },
     }
   } else {
     return {
       props: {
-        projects: result.result,
-      }
+        projects: projects.result,
+        posts: posts.result,
+      },
     }
   }
 }

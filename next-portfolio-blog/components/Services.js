@@ -2,8 +2,8 @@ import ServiceBlock from "./ServiceBlock";
 
 function Services() {
   return (
-    <section>
-      <div className="container py-16 md:py-20 mx-auto" id="services">
+    <section id="services">
+      <div className="container py-16 md:py-20 mx-auto">
         <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
           Here's what I'm good at
         </h2>

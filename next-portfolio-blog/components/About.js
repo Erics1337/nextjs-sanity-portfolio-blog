@@ -1,11 +1,10 @@
 import Image from "next/image"
 import LetsConnect from "./LetsConnect";
 
-function WhoAmI() {
+function About() {
     return (
-        <section>
-            <div className="bg-grey-50"
-     id="about">
+        <section id="about">
+        <div className="bg-grey-50" id="about">
     <div className="container py-16 md:py-20 flex flex-col lg:flex-row items-center mx-auto">
         <div className="w-full sm:w-3/4 lg:w-3/5 text-center lg:text-left">
             <h2
@@ -119,4 +118,4 @@ function WhoAmI() {
     )
 }
 
-export default WhoAmI
+export default About

@@ -48,7 +48,7 @@ function Statistics() {
 
 
   return (
-    <section>
+    <section id="stats">
               {/* <ul>
         {commits.map(commit => (
           <li key={commit.id}>
@@ -61,7 +61,6 @@ function Statistics() {
       <div
         className="bg-top bg-cover bg-no-repeat pb-16 md:py-16 lg:py-24"
         style={{ backgroundImage: "url(img/experience-figure.png)" }}
-        id="statistics"
       >
         <div className="container">
           <div className="bg-white w-5/6 md:w-11/12 2xl:w-full mx-auto py-16 lg:py-20 xl:py-24 shadow">

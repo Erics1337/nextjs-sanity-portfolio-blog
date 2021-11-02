@@ -40,9 +40,9 @@ function Contact() {
   }
 
   return (
-    <section>
+    <section id="contact">
       {/* Contact Form */}
-      <div className="container py-16 md:py-20" id="contact">
+      <div className="container py-16 md:py-20">
         {/* Form Group */}
         {submitted ? (
           <div>
