@@ -21,7 +21,7 @@ export const Post = ({ title, body, image }) => {
 
     return (
         <div>
-            <Toolbar />
+            <Navbar />
             <div className={styles.main}>
                 <h1>{title}</h1>
                 {/* If image exists in state then display it */}

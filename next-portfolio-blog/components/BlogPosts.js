@@ -1,6 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react';
 import BlockContent from "@sanity/block-content-to-react"
+import { Link } from 'next/link';
 
 
 function BlogPosts({ posts }) {
@@ -43,7 +44,7 @@ function BlogPosts({ posts }) {
 
             {/* Posts */}
             {mappedPosts.map((post, index) => (
-                <a href={`/post/${post.slug.current}`} className="shadow">
+                <Link href={`/post/${post.slug.current}`} className="shadow">
               <div
                 key={index}
                 style={{ backgroundImage: `url(${post.mainImage})` }}
@@ -63,7 +64,7 @@ function BlogPosts({ posts }) {
 
                 </span>
               </div>
-            </a>
+            </Link>
             ))}
            
           </div>
