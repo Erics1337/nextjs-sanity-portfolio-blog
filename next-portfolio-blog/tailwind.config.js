@@ -1,15 +1,7 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+// const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-    purge: {
-        content: ["**/*.html"],
-        options: {
-            safelist: {
-                standard: ["active"],
-                deep: [/glide/]
-            }
-        }
-    },
+    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: false,
     theme: {
         fontFamily: {
