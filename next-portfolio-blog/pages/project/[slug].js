@@ -2,7 +2,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react';
 import styles from '../../styles/Post.module.css'
-import Toolbar from '../../components/toolbar'
+import Navbar from '../../components/Navbar'
 import router from 'next/router';
 
 export const Project = ({ title, body, image, link }) => {
@@ -22,7 +22,7 @@ export const Project = ({ title, body, image, link }) => {
 
     return (
         <div>
-            <Toolbar />
+            <Navbar />
             <div className={styles.main}>
                 <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
                 {/* If image exists in state then display it */}

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Toolbar from '../components/Toolbar'
+import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 
@@ -39,9 +39,9 @@ export default function Blog({ posts }) {
 
   console.log(posts)
   return (
-    <div>
-      <Toolbar />
-      <div className={styles.main}>
+    <>
+      <Navbar />
+      <section id="blog" className={styles.main}>
         <h1>Welcome To My Blog</h1>
         <h3>Recent Posts:</h3>
 
@@ -53,8 +53,8 @@ export default function Blog({ posts }) {
             </div>))
           : <>No Posts Yet</>}
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
 

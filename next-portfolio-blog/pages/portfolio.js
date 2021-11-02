@@ -4,8 +4,10 @@ import styles from '../styles/Home.module.css'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Navbar from '../components/Navbar'
 
-export default function Projects({ projects }) {
+
+export default function Portfolio({ projects }) {
     const router = useRouter()
 
   // mapped array of projects that weve created and set inside of state
@@ -35,6 +37,8 @@ export default function Projects({ projects }) {
   }, [projects])
 
   return (
+    <>
+    <Navbar />
     <section id="portfolio">
       <div className={styles.main}>
         <h1>My Projects</h1>
@@ -50,29 +54,29 @@ export default function Projects({ projects }) {
         </div>
       </div>
     </section>
+    </>
   )
 }
 
-export default Projects
 
-// export const getServerSideProps = async pageContext => {
-//   const query = encodeURIComponent(`*[ _type == "project" ]`)
-//   const url = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query}`
-//   const result = await fetch(url).then(res => res.json())
+export const getServerSideProps = async pageContext => {
+  const query = encodeURIComponent(`*[ _type == "project" ]`)
+  const url = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query}`
+  const result = await fetch(url).then(res => res.json())
 
-//     // If no project projects
-//   if (!result.result || !result.result.length) {
-//     return {
-//       props: {
-//         projects: [],
-//       }
-//     }
-//   } else {
-//     return {
-//       props: {
-//         projects: result.result,
-//       }
-//     }
-//   }
+    // If no project projects
+  if (!result.result || !result.result.length) {
+    return {
+      props: {
+        projects: [],
+      }
+    }
+  } else {
+    return {
+      props: {
+        projects: result.result,
+      }
+    }
+  }
 
-// }
+}

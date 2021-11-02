@@ -17,9 +17,9 @@ const Navbar = ({ open, setOpen }) => {
                                 </a>
                             </div>
 
-                            <div className="flex items-center space-x-1">
-                                <a href="/" className="hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900">Portfolio</a>
-                                <a href="/" className="hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900">Blog</a>
+                            <div className="flex items-center space-x-5">
+                                <Link href="/portfolio" className="hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900">Portfolio</Link>
+                                <Link href="/blog" className="hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900">Blog</Link>
                             </div>
                             </div>
 

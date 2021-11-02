@@ -2,7 +2,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react';
 import styles from '../../styles/Post.module.css'
-import Toolbar from '../../components/toolbar'
+import Navbar from '../../components/Navbar'
 
 export const Post = ({ title, body, image }) => {
     const [imageUrl, setImageUrl] = useState('')

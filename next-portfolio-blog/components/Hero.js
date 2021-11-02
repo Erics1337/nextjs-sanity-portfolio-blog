@@ -18,7 +18,7 @@ function Hero() {
             />
           </div>
           <div className="lg:pl-8 pt-8 sm:pt-10 lg:pt-0">
-            <h1 className="font-header text-black text-4xl sm:text-5xl md:text-6xl text-center sm:text-left">
+            <h1 className="font-header text-white text-4xl sm:text-5xl md:text-6xl text-center sm:text-left">
               Hello I'm Eric Swanson!
             </h1>
 
