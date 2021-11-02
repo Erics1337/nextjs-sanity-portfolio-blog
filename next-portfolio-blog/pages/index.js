@@ -10,7 +10,7 @@ import Portfolio from "../components/Projects"
 import Clients from "../components/Clients"
 import Experience from "../components/Experience"
 import Statistics from "../components/Statistics"
-import BlogPosts from "../components/BlogPosts"
+import Posts from "../components/Posts"
 import Footer from "../components/Footer"
 import Contact from "../components/Contact"
 
@@ -50,7 +50,7 @@ export default function Home({ projects, posts }) {
       {/* <Clients /> */}
       <Experience />
       <Statistics />
-      <BlogPosts posts={posts} />
+      <Posts posts={posts} />
       <Contact />
       <Footer />
     </div>
