@@ -5,6 +5,7 @@ import imageUrlBuilder from "@sanity/image-url"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Navbar from "../components/Navbar"
+import Footer from '../components/Footer';
 
 export default function Portfolio({ projects }) {
   const router = useRouter()
@@ -56,16 +57,17 @@ export default function Portfolio({ projects }) {
                     router.push(`/project/${project.slug.current}`)
                   }
                 >
-                  <h2 className='text-primary font-semibold py-2'>{project.title}</h2>
+                  <h1 className='text-primary font-semibold text-2xl py-2'>{project.title}</h1>
                   <img className={styles.mainImage} src={project.mainImage} />
                 </div>
               ))
             ) : (
-              <>No Projects Yet</>
+              <div>No Projects Yet</div>
             )}
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }
