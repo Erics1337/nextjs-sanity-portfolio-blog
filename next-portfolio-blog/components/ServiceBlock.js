@@ -1,16 +1,16 @@
-function ServiceBlock({ image, title, body, link }) {
+function ServiceBlock({ image, hoverImage, title, body, link }) {
     return (
         <div className="shadow px-8 py-12 hover:bg-primary group rounded">
         <div className="text-center w-24 xl:w-28 h-24 xl:h-28 mx-auto">
           <div className="hidden group-hover:block">
             <img
-              src={`/img/${image}-white.svg`}
+              src={image}
               alt="development icon"
             />
           </div>
           <div className="block group-hover:hidden">
             <img
-              src={`/img/${image}-black.svg`}
+              src={hoverImage}
               alt="development icon"
             />
           </div>

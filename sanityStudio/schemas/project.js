@@ -48,6 +48,11 @@ export default {
         type: 'datetime',
       },
       {
+        name: 'subhead',
+        title: 'Sub Heading',
+        type: 'blockContent',
+      },
+      {
         name: 'body',
         title: 'Body',
         type: 'blockContent',

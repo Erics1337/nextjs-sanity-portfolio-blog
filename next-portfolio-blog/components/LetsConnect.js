@@ -7,7 +7,7 @@ function LetsConnect() {
     return (
         <div className="flex flex-col sm:flex-row justify-center lg:justify-start pt-3 sm:pt-5">
         <div className="flex justify-center sm:justify-start items-center pl-0 md:pl-1">
-          <p className="font-body text-black text-lg uppercase pr-0">
+          <p className="font-body text-gray-800 text-lg uppercase pr-0">
             Let's connect
           </p>
         </div>
