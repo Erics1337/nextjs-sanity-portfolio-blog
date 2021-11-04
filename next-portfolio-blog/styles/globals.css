@@ -19,5 +19,5 @@ a {
 
 .hero-image {
   background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 20%, rgba(255,255,255,.95) 65%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 20%, rgba(255,255,255,.95) 65%, rgba(255,255,255,0) 100%);
 }

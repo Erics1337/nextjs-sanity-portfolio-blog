@@ -1,4 +1,5 @@
 import Link from 'next/link';
+// import LetsConnect from './LetsConnect';
 
 function Footer() {
   return (
@@ -11,23 +12,7 @@ function Footer() {
                 </p>
             </Link>
           {/* Social Icons */}
-          <div className="flex items-center justify-center sm:justify-start pt-5 sm:pt-0">
-            <a href="/">
-              <i className="bx bxl-facebook-square text-white hover:text-yellow text-2xl"></i>
-            </a>
-            <a href="/" className="pl-4">
-              <i className="bx bxl-twitter text-white hover:text-yellow text-2xl"></i>
-            </a>
-            <a href="/" className="pl-4">
-              <i className="bx bxl-dribbble text-white hover:text-yellow text-2xl"></i>
-            </a>
-            <a href="/" className="pl-4">
-              <i className="bx bxl-linkedin text-white hover:text-yellow text-2xl"></i>
-            </a>
-            <a href="/" className="pl-4">
-              <i className="bx bxl-instagram text-white hover:text-yellow text-2xl"></i>
-            </a>
-          </div>
+          {/* <LetsConnect /> */}
         {/* Sanity Studio Link */}
         <Link href="https://www.sanitystudio.cyberwildstudio.com">
             <p className=" cursor-pointer font-body text-white text-center md:text-left">Sanity Studio</p>
