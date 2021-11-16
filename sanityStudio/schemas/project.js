@@ -44,8 +44,18 @@ export default {
       },
       {
         name: 'publishedAt',
-        title: 'Published at',
+        title: 'Date This Post is Published at',
         type: 'datetime',
+      },
+      {
+        name: 'date',
+        title: 'Date this Project was Finished',
+        type: 'datetime',
+      },
+      {
+        name: 'tech',
+        title: 'Technologies Used',
+        type: 'blockContent',
       },
       {
         name: 'subhead',
@@ -55,11 +65,6 @@ export default {
       {
         name: 'body',
         title: 'Body',
-        type: 'blockContent',
-      },
-      {
-        name: 'tech',
-        title: 'Technologies Used',
         type: 'blockContent',
       },
     ],
