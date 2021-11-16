@@ -57,6 +57,11 @@ export default {
         title: 'Body',
         type: 'blockContent',
       },
+      {
+        name: 'tech',
+        title: 'Technologies Used',
+        type: 'blockContent',
+      },
     ],
   
     preview: {
