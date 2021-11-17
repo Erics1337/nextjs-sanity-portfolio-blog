@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
@@ -10,6 +9,7 @@ import { useRouter } from 'next/router'
 
 export default function Blog({ posts }) {
   const router = useRouter()
+  const [open, setOpen] = useState(false)
 
   // mapped array of posts that weve created and set inside of state
   const [mappedPosts, setMappedPosts] = useState([])
@@ -40,16 +40,16 @@ export default function Blog({ posts }) {
   console.log(posts)
   return (
     <>
-      <Navbar />
-      <section id="blog" className={styles.main}>
+      <Navbar open={open} setOpen={setOpen} />
+      <section id="blog" className={'text-center'}>
         <h1>Welcome To My Blog</h1>
         <h3>Recent Posts:</h3>
 
-        <div className={styles.feed}>
+        <div className={'flex flex-col items-center'}>
           {mappedPosts.length ? 
-            mappedPosts.map((post, index) => (<div key={index} className={styles.post} onClick={() => router.push(`/post/${post.slug.current}`)}>
+            mappedPosts.map((post, index) => (<div key={index} className={'m-4 w-50 h-40 cursor-pointer text-center max-w-2/3'} onClick={() => router.push(`/post/${post.slug.current}`)}>
               <h3>{post.title}</h3>
-              <img className={styles.mainImage} src={post.mainImage} />
+              <img className={'w-75 hover:w-100 transition delay-75 rounded max-w-1/3 shadow-md'} src={post.mainImage} />
             </div>))
           : <>No Posts Yet</>}
         </div>

@@ -94,6 +94,8 @@ module.exports = {
         }
     },
     variants: {
+        // Allows to change width on hover
+        width: ["responsive", "hover", "focus"],
         extend: {
             display: ['responsive', 'group-hover'],
         }

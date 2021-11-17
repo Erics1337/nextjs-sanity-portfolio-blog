@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import styles from '../styles/Toolbar.module.css'
 import Link from 'next/link'
 import { MenuIcon, HomeIcon } from "@heroicons/react/solid"
 

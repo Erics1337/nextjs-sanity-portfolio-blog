@@ -1,10 +1,10 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react';
-import styles from '../../styles/Post.module.css'
 import Navbar from '../../components/Navbar'
 
 export const Post = ({ title, body, image }) => {
+    const [open, setOpen] = useState(false)
     const [imageUrl, setImageUrl] = useState('')
 
     useEffect(() => {
@@ -21,12 +21,12 @@ export const Post = ({ title, body, image }) => {
 
     return (
         <div>
-            <Navbar />
-            <div className={styles.main}>
+                <Navbar open={open} setOpen={setOpen} />
+            <div className={'text-center mx-auto'}>
                 <h1>{title}</h1>
                 {/* If image exists in state then display it */}
-                {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
-                <div className={styles.body}>
+                {imageUrl && <img className={'w-50'} src={imageUrl} />}
+                <div className={'pt-4 pb-4 font-semibold leading-3'}>
                     <BlockContent blocks={body} />
                 </div>
             </div>

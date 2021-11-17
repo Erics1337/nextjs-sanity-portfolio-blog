@@ -1,11 +1,12 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import BlockContent from '@sanity/block-content-to-react';
-import styles from '../../styles/Post.module.css'
 import Navbar from '../../components/Navbar'
 import router from 'next/router';
+import Footer from '../../components/Footer';
 
 export const Project = ({ title, body, image, link }) => {
+    const [open, setOpen] = useState(false)
     const [imageUrl, setImageUrl] = useState('')
 
     useEffect(() => {
@@ -21,16 +22,20 @@ export const Project = ({ title, body, image, link }) => {
     
 
     return (
-        <div>
-            <Navbar />
-            <div className={styles.main}>
-                <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
+        <div className="flex flex-col justify-middle h-screen">
+            <div className='mx-auto'>
+                <Navbar open={open} setOpen={setOpen} />
+            <div className={'flex flex-col md:flex-row'}>
                 {/* If image exists in state then display it */}
-                {imageUrl && <img className={styles.mainImage} src={imageUrl} onClick={() => router.push(`${link}`)}/>}
-                <div className={styles.body}>
+                <div className={'p-5 max-w-3xl leading-6 text-justify'}>
+                <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
                     <BlockContent blocks={body} />
                 </div>
+                {imageUrl && <img className={'mx-auto pl-4 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>}
             </div>
+        </div>
+        <div className="m-auto"></div>
+          <Footer />
         </div>
         )
 }
@@ -59,9 +64,13 @@ export const getServerSideProps = async pageContext => {
     } else {
         return {
             props: {
-                body: project.body,
+                categories: project.categories,
                 title: project.title,
+                date: project.date,
                 image: project.mainImage,
+                // subhead: project.subhead,
+                body: project.body,
+                tech: project.tech,
                 link: project.link,
             }
         }

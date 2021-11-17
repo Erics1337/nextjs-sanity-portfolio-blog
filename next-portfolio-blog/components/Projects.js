@@ -1,5 +1,4 @@
 import imageUrlBuilder from '@sanity/image-url'
-import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from "react"
 
