@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import BlockContent from "sanity/block-content-to-react"
+import BlockContent from "@sanity/block-content-to-react"
 
 
 export default function Portfolio({ projects }) {
