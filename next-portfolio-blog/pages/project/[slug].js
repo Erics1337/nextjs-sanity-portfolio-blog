@@ -29,7 +29,7 @@ export const Project = ({ title, body, image, link }) => {
                 {/* If image exists in state then display it */}
                 <div className={'p-5 max-w-3xl leading-6 text-justify'}>
                 <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
-                    <BlockContent blocks={body} />
+                    <BlockContent blocks={post.body} projectId="ulqdo09f" dataset="production" />
                 </div>
                 {imageUrl && <img className={'mx-auto pl-4 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>}
             </div>
