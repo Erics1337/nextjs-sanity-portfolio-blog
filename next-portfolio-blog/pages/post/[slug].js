@@ -27,7 +27,7 @@ export const Post = ({ title, body, image }) => {
                 {/* If image exists in state then display it */}
                 {imageUrl && <img className={'w-50'} src={imageUrl} />}
                 <div className={'pt-4 pb-4 font-semibold leading-3'}>
-                    <BlockContent blocks={post.body} projectId="ulqdo09f" dataset="production" />
+                    <BlockContent blocks={body} projectId="ulqdo09f" dataset="production" />
                 </div>
             </div>
         </div>

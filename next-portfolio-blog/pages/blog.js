@@ -37,7 +37,6 @@ export default function Blog({ posts }) {
     }
   }, [posts])
 
-  console.log(posts)
   return (
     <>
       <Navbar open={open} setOpen={setOpen} />
