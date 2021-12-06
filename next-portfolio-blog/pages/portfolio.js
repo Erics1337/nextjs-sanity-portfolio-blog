@@ -44,19 +44,23 @@ export default function Portfolio({ projects }) {
   return (
     <>
       <section id="portfolio">
-      <div className="flex flex-col justify-between h-screen">
       <Navbar open={open} setOpen={setOpen} />
-
-        <div className={"text-center mb-5"}>
-          <h1 className="font-bold text-3xl text-primary py-5">My Portfolio</h1>
-          <h3 className="py-2 text-secondary">Check Out My Recent Projects</h3>
+      <div className="flex flex-col justify-between h-screen bg-grey-50">
+    {/* <div className={'bg-grey-50'}> */}
+    <div className='py-10'>
+      <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
+            Welcome to my Portfolio
+          </h2>
+          <h4 className="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
+            Check out some of my projects below
+          </h4>
         </div>
 
           <div className={"flex-none md:flex justify-center mb-auto"}>
             {mappedProjects.length ? (
               mappedProjects.map((project, index) => (
                 <div key={index} className={"m-2 text-center group"}>
-                  <h1 className='font-semibold text-primary'>{project.title}</h1>
+                  <h1 className='text-1xl sm:text-2xl lg:text-3xl text-primary'>{project.title}</h1>
                   <img
                     className={
                       "m-2 cursor-pointer hover:shadow-lg transition ease-in duration-75 rounded mx-auto"

@@ -1,6 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from "react"
+import Link from 'next/link'
 
 function Portfolio({ projects }) {
     const router = useRouter()
@@ -33,9 +34,11 @@ function Portfolio({ projects }) {
   return (
     <section id="projects">
       <div className="container py-16 md:py-20">
-        <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
+      <Link href={'/portfolio'} >
+        <h2 className="font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
           Check out my Portfolio
         </h2>
+      </Link>
         <h3 className="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
           Here are some examples of what I have created
         </h3>

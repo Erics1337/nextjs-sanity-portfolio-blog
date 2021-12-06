@@ -33,9 +33,11 @@ function Posts({ posts }) {
     <section id="posts">
       <div className="bg-grey-50" id="blog">
         <div className="container py-16 md:py-20">
-          <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
+        <Link href={'/blog'} >
+          <h2 className="font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
             Check out these posts I wrote
           </h2>
+        </Link>
           <h4 className="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
             I like to share the knowledge I learn!
           </h4>
@@ -59,10 +61,10 @@ function Posts({ posts }) {
                   <span className="font-body font-semibold text-lg text-black block">
                     {post.title}
                   </span>
-                  <span className="font-body text-grey-20 pt-2 block">
+                  {/* <span className="font-body text-grey-20 pt-2 block">
                   <BlockContent blocks={post.body} projectId="ulqdo09f" dataset="production" />
 
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Link>

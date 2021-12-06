@@ -1,11 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
+import BlockContent from '@sanity/block-content-to-react'
+import serializers  from '../utils/sanity';
+
 
 // Used for links router.push
 import { useRouter } from 'next/router'
+import Footer from '../components/Footer';
+
+
 
 export default function Blog({ posts }) {
   const router = useRouter()
@@ -39,19 +46,50 @@ export default function Blog({ posts }) {
 
   return (
     <>
+      <section id="portfolio" className="flex flex-col min-h-screen ">
       <Navbar open={open} setOpen={setOpen} />
-      <section id="blog" className={'text-center'}>
-        <h1>Welcome To My Blog</h1>
-        <h3>Recent Posts:</h3>
+        <div className="bg-grey-50 flex-grow">
+        <div className="container py-16 md:py-20">
+          <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
+            Welcome to the blog
+          </h2>
+          <h4 className="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
+            Check out these posts I wrote
+          </h4>
 
-        <div className={'flex flex-col items-center'}>
-          {mappedPosts.length ? 
-            mappedPosts.map((post, index) => (<div key={index} className={'m-4 w-50 h-40 cursor-pointer text-center max-w-2/3'} onClick={() => router.push(`/post/${post.slug.current}`)}>
-              <h3>{post.title}</h3>
-              <img className={'w-75 hover:w-100 transition delay-75 rounded max-w-1/3 shadow-md'} src={post.mainImage} />
-            </div>))
-          : <>No Posts Yet</>}
+          <div className="w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10 pt-12">
+            {/* Posts */}
+            {mappedPosts.map((post, index) => (
+                <Link href={`/post/${post.slug.current}`} key={index}>
+                  <div className="shadow cursor-pointer">
+                <div
+                  key={index}
+                  style={{ backgroundImage: `url(${post.mainImage})` }}
+                  className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group"
+                >
+                  <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
+                  <span className="font-body font-bold text-sm md:text-base text-white border-2 border-white block px-6 py-2 uppercase rounded-full text-center absolute right-0 bottom-0 mr-4 mb-4">
+                    Read More
+                  </span>
+                </div>
+                <div className="bg-white py-6 xl:py-8 px-5">
+                  <span className="font-body font-semibold text-lg text-black block">
+                    {post.title}
+                  </span>
+                  <span className="font-body text-grey-20 pt-2 block">
+                  <BlockContent blocks={post.excerpt} serializers={serializers} projectId="ulqdo09f" dataset="production"  />
+
+                  </span>
+                </div>
+              </div>
+            </Link>
+            ))}
+           
+          </div>
         </div>
+      </div>
+
+          <Footer />
       </section>
     </>
   )

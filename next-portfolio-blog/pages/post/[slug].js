@@ -1,7 +1,17 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from "react-portable-text"
+
 import Navbar from '../../components/Navbar'
+// import serializers from '../../utils/sanity'
+import Footer from '../../components/Footer';
+
+const serializers = {
+    h2: (props) => <h2 className={'font-semibold text-2xl mt-5 py-4'} {...props} />,
+    li: ({ children }) => <li className="list-disc">{children}</li>,
+    normal: ({ children }) => <p className="my-4">{children}</p>
+}
+
 
 export const Post = ({ title, body, image }) => {
     const [open, setOpen] = useState(false)
@@ -21,15 +31,29 @@ export const Post = ({ title, body, image }) => {
 
     return (
         <div>
+            <section id="blogPost" className="flex flex-col min-h-screen ">
                 <Navbar open={open} setOpen={setOpen} />
-            <div className={'text-center mx-auto'}>
-                <h1>{title}</h1>
+                <div className="bg-grey-50 flex-grow">
+            <div className={'container'}>
                 {/* If image exists in state then display it */}
-                {imageUrl && <img className={'w-50'} src={imageUrl} />}
-                <div className={'pt-4 pb-4 font-semibold leading-3'}>
-                    <BlockContent blocks={body} projectId="ulqdo09f" dataset="production" />
+                <h1 className={'text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl'}>{title}</h1>
+                {imageUrl && <img className={'w-50 py-5'} src={imageUrl} />}
+                <div className={'flex justify-center py-5'}>
+                    {/* <BlockContent blocks={body} projectId="ulqdo09f" dataset="production" imageOptions={{w: 400, h: 240, fit: 'max'}}/> */}
+                    <PortableText
+                    className={'justify-content-center'}
+                    imageOptions={{w: 400, h: 240, fit: 'max'}}
+                        projectId="ulqdo09f" dataset="production"
+                        content={body}
+                        // Optionally override marks, decorators, blocks, etc. in a flat
+                        // structure without doing any gymnastics
+                        serializers={serializers}
+                    />
                 </div>
             </div>
+            </div>
+            <Footer />
+            </section>
         </div>
         )
 }
