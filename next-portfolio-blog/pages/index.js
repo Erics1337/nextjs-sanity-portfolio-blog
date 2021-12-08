@@ -62,7 +62,7 @@ export const getServerSideProps = async (pageContext) => {
   const projects = await fetch(url1).then((res) => res.json())
 
   const query2 = encodeURIComponent(
-    `*[ _type == "post" ]{title, slug, body, mainImage{asset->{_id,url},alt}}`
+    `*[ _type == "post" ][3]{title, slug, body, excerpt, mainImage{asset->{_id,url},alt}}`
   )
   const url2 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query2}`
   const posts = await fetch(url2).then((res) => res.json())

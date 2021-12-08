@@ -31,7 +31,6 @@ function Posts({ posts }) {
       
   return (
     <section id="posts">
-      <div className="bg-grey-50" id="blog">
         <div className="container py-16 md:py-20">
         <Link href={'/blog'} >
           <h2 className="font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
@@ -53,28 +52,26 @@ function Posts({ posts }) {
                   className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group"
                 >
                   <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
-                  <span className="font-body font-bold text-sm md:text-base text-white border-2 border-white block px-6 py-2 uppercase rounded-full text-center absolute right-0 bottom-0 mr-4 mb-4">
-                    Read More
-                  </span>
                 </div>
-                <div className="bg-white py-6 xl:py-8 px-5">
+                <div className="bg-grey-50 py-6 xl:py-8 px-5">
                   <span className="font-body font-semibold text-lg text-black block">
                     {post.title}
                   </span>
-                  {/* <span className="font-body text-grey-20 pt-2 block">
-                  <BlockContent blocks={post.body} projectId="ulqdo09f" dataset="production" />
+                  <span className="font-body text-grey-20 pt-2 block">
+                  <BlockContent blocks={post.excerpt} projectId="ulqdo09f" dataset="production" />
+                  <p className="font-body font-bold text-sm md:text-base text-black border-2 border-black hover:bg-white 
+                     block px-6 py-2 my-3 uppercase rounded-full text-center">
+                    Read More
+                  </p>
+                  </span>
 
-                  </span> */}
                 </div>
               </div>
             </Link>
             ))}
            
           </div>
-        </div>
       </div>
     </section>
   )
 }
-
-export default Posts

@@ -32,7 +32,7 @@ export const Project = ({ title, body, image, link }) => {
                     <BlockContent blocks={body} projectId="ulqdo09f" dataset="production" />
                 </div>
                 {/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
-                <div class="mx-auto pl-4 mt-5 w-2/3 max-w-3xl h-100 relative cursor-pointer" onClick={() => router.push(`${link}`)}>
+                <div className="mx-auto pl-4 mt-5 w-2/3 max-w-3xl h-100 relative cursor-pointer" onClick={() => router.push(`${link}`)}>
                     <div className='absolute inset-0 bg-cover bg-center z-0' 
                         style={{backgroundImage: `url(${imageUrl})`}}
                         />

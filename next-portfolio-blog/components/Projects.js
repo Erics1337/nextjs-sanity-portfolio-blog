@@ -32,7 +32,7 @@ function Portfolio({ projects }) {
       }, [projects])
 
   return (
-    <section id="projects">
+    <section id="projects" className={'bg-grey-50'}>
       <div className="container py-16 md:py-20">
       <Link href={'/portfolio'} >
         <h2 className="font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
@@ -50,7 +50,7 @@ function Portfolio({ projects }) {
             (project, index) => (
             <div key={index} className='transition-all transform hover:scale-105' 
             onClick={() => router.push(`/project/${project.slug.current}`)}>
-              <div class="w-full h-80 relative cursor-pointer" onClick={() => router.push(`/project/${project.slug.current}`)}>
+              <div className="w-full h-80 relative cursor-pointer" onClick={() => router.push(`/project/${project.slug.current}`)}>
                 <div className='absolute inset-0 bg-cover bg-center z-0' 
                     style={{backgroundImage: `url(${project.mainImage})`}}
                     />

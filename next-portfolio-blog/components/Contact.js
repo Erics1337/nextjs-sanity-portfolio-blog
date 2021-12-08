@@ -40,7 +40,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact">
+    <section className="bg-grey-50" id="contact">
       {/* Contact Form */}
       <div className="container py-16 md:py-20">
         {/* Form Group */}
