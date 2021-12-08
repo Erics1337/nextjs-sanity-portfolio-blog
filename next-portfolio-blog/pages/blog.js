@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
-import BlockContent from '@sanity/block-content-to-react'
+import PortableText from "react-portable-text"
 import serializers  from '../utils/sanity';
 
 
@@ -77,7 +77,7 @@ export default function Blog({ posts }) {
                     {post.title}
                   </span>
                   <span className="font-body text-grey-20 pt-2 block">
-                  <BlockContent blocks={post.excerpt} serializers={serializers} projectId="ulqdo09f" dataset="production"  />
+                  <PortableText content={post.excerpt} serializers={serializers} projectId="ulqdo09f" dataset="production"  />
 
                   </span>
                 </div>

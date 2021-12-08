@@ -56,13 +56,13 @@ export default function Home({ projects, posts }) {
   )
 }
 
-export const getServerSideProps = async (pageContext) => {
-  const query1 = encodeURIComponent(`*[ _type == "project" ]`)
+export const getServerSideProps = async () => {
+  const query1 = encodeURIComponent(`*[ _type == "project" ] | order(_createdAt asc) [0...4]`)
   const url1 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query1}`
   const projects = await fetch(url1).then((res) => res.json())
 
   const query2 = encodeURIComponent(
-    `*[ _type == "post" ][3]{title, slug, body, excerpt, mainImage{asset->{_id,url},alt}}`
+    `*[ _type == "post" ] | order(_createdAt asc) [0...3]`
   )
   const url2 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query2}`
   const posts = await fetch(url2).then((res) => res.json())

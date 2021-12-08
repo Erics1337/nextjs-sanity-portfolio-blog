@@ -1,6 +1,6 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
-import BlockContent from '@sanity/block-content-to-react';
+import PortableText from "react-portable-text"
 import Navbar from '../../components/Navbar'
 import router from 'next/router';
 import Footer from '../../components/Footer';
@@ -29,7 +29,7 @@ export const Project = ({ title, body, image, link }) => {
                 {/* If image exists in state then display it */}
                 <div className={'p-5 max-w-3xl leading-6'}>
                     <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
-                    <BlockContent blocks={body} projectId="ulqdo09f" dataset="production" />
+                    <PortableText content={body} projectId="ulqdo09f" dataset="production" />
                 </div>
                 {/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
                 <div className="mx-auto pl-4 mt-5 w-2/3 max-w-3xl h-100 relative cursor-pointer" onClick={() => router.push(`${link}`)}>

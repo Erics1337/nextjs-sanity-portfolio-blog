@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import BlockContent from "@sanity/block-content-to-react"
+import PortableText from "react-portable-text"
 
 
 export default function Portfolio({ projects }) {
@@ -72,7 +72,7 @@ export default function Portfolio({ projects }) {
                   />
                   <div className='hidden group-hover:block'>
                     <h3>Tech Used: </h3>
-                    <BlockContent className='inline-flex font-semibold space-x-2' blocks={project.tech} projectId="ulqdo09f" dataset="production" />
+                    <PortableText className='inline-flex font-semibold space-x-2' content={project.tech} projectId="ulqdo09f" dataset="production" />
                   </div>
                 </div>
               ))

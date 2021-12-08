@@ -1,10 +1,10 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react';
-import BlockContent from "@sanity/block-content-to-react"
+import PortableText from "react-portable-text"
 import Link from 'next/link';
 
 
-function Posts({ posts }) {
+function Posts({ posts = {} }) {
     const [mappedPosts, setMappedPosts] = useState([])
 
     useEffect(() => {
@@ -58,7 +58,7 @@ function Posts({ posts }) {
                     {post.title}
                   </span>
                   <span className="font-body text-grey-20 pt-2 block">
-                  <BlockContent blocks={post.excerpt} projectId="ulqdo09f" dataset="production" />
+                  <PortableText content={post.excerpt} projectId="ulqdo09f" dataset="production" />
                   <p className="font-body font-bold text-sm md:text-base text-black border-2 border-black hover:bg-white 
                      block px-6 py-2 my-3 uppercase rounded-full text-center">
                     Read More
@@ -75,3 +75,5 @@ function Posts({ posts }) {
     </section>
   )
 }
+
+export default Posts

@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 
-const allCategories=['category 1', 'category 2', 'category 3']
-const categories=['category 1', 'category 2']
-
-
 
 const Sidebar = ({ categories, allCategories = [] }) => {
 // This will highlight the categories of the current post
-  const [currentCategory, setCurrentCategory] = useState(categories)
+  // const [currentCategory, setCurrentCategory] = useState(categories)
 
   return (
     <nav className={'h-screen sticky top-18 text-right'}>
@@ -22,7 +18,7 @@ const Sidebar = ({ categories, allCategories = [] }) => {
                 ${categories.includes(element) && 'text-primary hover:text-secondary'}
                 group`
               }
-              onClick={() => setCurrentCategory(element)}
+              // onClick={() => setCurrentCategory(element)}
             >
                 {element}
             </li>
