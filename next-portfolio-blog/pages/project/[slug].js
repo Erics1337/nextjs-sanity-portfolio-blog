@@ -25,20 +25,22 @@ export const Project = ({ title, body, image, link }) => {
         <div className="flex flex-col justify-middle h-screen">
                 <Navbar open={open} setOpen={setOpen} />
             <div className='bg-grey-50 flex-grow'>
-            <div className={'container flex flex-col lg:flex-row'}>
+            <div className={'container grid lg:grid-cols-2 grid-cols-1'}>
                 {/* If image exists in state then display it */}
-                <div className={'p-5 max-w-3xl leading-6'}>
+                {/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
+                    <div className="pl-4 mt-5 h-100 max-w-3xl relative cursor-pointer" onClick={() => router.push(`${link}`)}>
+                        <div className='absolute inset-0 bg-cover bg-center z-0' 
+                            style={{backgroundImage: `url(${imageUrl})`}}
+                            />
+                        <div className="p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold">
+                            View project
+                        </div>
+                    </div>
+                <div>
+                <div className={'p-5'}>
                     <h1 className='p-5 text-3xl font-semibold text-center'>{title}</h1>
                     <PortableText content={body} projectId="ulqdo09f" dataset="production" />
                 </div>
-                {/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
-                <div className="mx-auto pl-4 mt-5 w-2/3 max-w-3xl h-100 relative cursor-pointer" onClick={() => router.push(`${link}`)}>
-                    <div className='absolute inset-0 bg-cover bg-center z-0' 
-                        style={{backgroundImage: `url(${imageUrl})`}}
-                        />
-                    <div className="p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold">
-                        View project
-                    </div>
                 </div>
             </div>
         </div>
@@ -82,8 +84,6 @@ export const getServerSideProps = async pageContext => {
             }
         }
     }
-
-
 }
 
 export default Project

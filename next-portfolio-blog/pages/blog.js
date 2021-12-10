@@ -1,52 +1,51 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+
 import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
-import PortableText from "react-portable-text"
-import serializers  from '../utils/sanity';
-
 
 // Used for links router.push
 import { useRouter } from 'next/router'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
+import Sidebar from '../components/Sidebar'
+import BlogCard from '../components/BlogCard'
 
 
 
-export default function Blog({ posts }) {
+export default function Blog({ posts, allCategories }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
-
-  // mapped array of posts that weve created and set inside of state
+  const [currentCategory, setCurrentCategory] = useState('')
   const [mappedPosts, setMappedPosts] = useState([])
 
   useEffect(() => {
-    // If no posts set it to empty array
-    if (posts.length) {
+
         // ImageBuilder function
         const imgBuilder = imageUrlBuilder({
           projectId: 'ulqdo09f',
           dataset: 'production'
       })
 
+      // check each category of each post to see if it matches the current category, if so add it to the mappedPosts array
       setMappedPosts(
         posts.map(post => {
-          return {
+          if (!currentCategory == '') {
+            if (post.categories.includes(currentCategory)) {
+              return {
+                ...post,
+                mainImage: imgBuilder.image(post.mainImage).width(500).height(250)
+              }
+            } else return {}
+          } else return {
             ...post,
-            // All images will be same width and height
             mainImage: imgBuilder.image(post.mainImage).width(500).height(250)
           }
         })
-      )
-    } else {
-      setMappedPosts([])
-    }
-  }, [posts])
+        )
+  }, [currentCategory])
 
   return (
     <>
-      <section id="portfolio" className="flex flex-col min-h-screen ">
+      <section id="portfolio" className="flex flex-col h-screen ">
       <Navbar open={open} setOpen={setOpen} />
         <div className="bg-grey-50 flex-grow">
         <div className="container py-16 md:py-20">
@@ -57,38 +56,54 @@ export default function Blog({ posts }) {
             Check out these posts I wrote
           </h4>
 
-          <div className="w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10 pt-12">
-            {/* Posts */}
-            {mappedPosts.map((post, index) => (
-                <Link href={`/post/${post.slug.current}`} key={index}>
-                  <div className="shadow cursor-pointer">
-                <div
-                  key={index}
-                  style={{ backgroundImage: `url(${post.mainImage})` }}
-                  className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group"
-                >
-                  <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
-                  <span className="font-body font-bold text-sm md:text-base text-white border-2 border-white block px-6 py-2 uppercase rounded-full text-center absolute right-0 bottom-0 mr-4 mb-4">
-                    Read More
-                  </span>
-                </div>
-                <div className="bg-white py-6 xl:py-8 px-5">
-                  <span className="font-body font-semibold text-lg text-black block">
-                    {post.title}
-                  </span>
-                  <span className="font-body text-grey-20 pt-2 block">
-                  <PortableText content={post.excerpt} serializers={serializers} projectId="ulqdo09f" dataset="production"  />
+          <div className="flex flex-1 pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+              {/* Posts */}
+              
+              {!Object.keys(mappedPosts).length == 0 ? (mappedPosts.map((post, index) => 
+              Object.keys(post).length ? 
+                  <BlogCard post={post} content={post?.excerpt} index={index} />
+                :
+                <div className={'w-100'}></div>
+                  
+              ))
+              
+                  :
+                  (
+                  <div className="">No Posts In This Category</div>
+                    )
+              }
+            </div>
 
-                  </span>
+            <div className=''>
+              <nav className={'hidden sm:block pl-3 sticky top-18 text-right'}>
+                <div className={'border-r'}>
+                  <ul className={'flex flex-col mr-3'}>
+                  <h1 onClick={() => setCurrentCategory('')} 
+                      className={`underline font-semibold text-xl py-4 cursor-pointer
+                          ${currentCategory == '' ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+                          group`}>Post Categories</h1>
+                    {allCategories.map((element, index) => (
+                      <li
+                        key={index}
+                        className={
+                          `text-xl py-4 cursor-pointer
+                          ${currentCategory == element ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+                          group`
+                        }
+                        onClick={() => setCurrentCategory(element)}
+                      >
+                          {element}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+              </nav>
               </div>
-            </Link>
-            ))}
-           
+
           </div>
         </div>
       </div>
-
           <Footer />
       </section>
     </>
@@ -96,10 +111,17 @@ export default function Blog({ posts }) {
 }
 
 
-export const getServerSideProps = async pageContext => {
-  const query = encodeURIComponent(`*[ _type == "post" ]`)
+export const getServerSideProps = async () => {
+  const query = encodeURIComponent(`*[ _type == "post" ]{..., 'categories': categories[]->title}`)
   const url = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query}`
   const result = await fetch(url).then(res => res.json())
+
+  const query2 = encodeURIComponent(`*[ _type == "category" ]{title}`);
+  const url2 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query2}`;
+
+  const result2 = await fetch(url2).then(res => res.json())
+  const allCategories = result2.result.map(category => category.title)
+
 
   if (!result.result || !result.result.length) {
     return {
@@ -111,6 +133,7 @@ export const getServerSideProps = async pageContext => {
     return {
       props: {
         posts: result.result,
+        allCategories: allCategories
       }
     }
   }

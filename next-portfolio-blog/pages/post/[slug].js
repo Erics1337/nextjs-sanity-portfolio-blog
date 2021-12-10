@@ -42,7 +42,7 @@ export const Post = ({ title, body, image, publishedAt, name, categories, allCat
 
     return (
         <div>
-            <section id="blogPost" className="flex flex-col min-h-screen ">
+            <section id="blogPost" className="flex flex-col h-screen ">
                 <Navbar open={open} setOpen={setOpen} />
                 <div className="bg-grey-50 flex-grow">
             <div className={'container'}>
@@ -50,8 +50,8 @@ export const Post = ({ title, body, image, publishedAt, name, categories, allCat
                 {imageUrl && <img className={'w-50 py-5'} src={imageUrl} />}
                 <div className="grid grid-cols-5 gap-3">
                     <div className={'md:col-span-4 col-span-5 justify-center p-5 my-5'}>
-                <h1 className={'text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl'}>{title}</h1>
-                <p className={'text-primary text-xs italic py-2'}>{moment(publishedAt).startOf('day').fromNow()}</p>
+                    <h1 className={'text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl'}>{title}</h1>
+                    <p className={'text-primary text-xs italic py-2'}>{moment(publishedAt).startOf('day').fromNow()}</p>
                         <PortableText
                         className={'justify-center'}
                         imageOptions={{w: 400, h: 240, fit: 'max'}}
@@ -62,7 +62,7 @@ export const Post = ({ title, body, image, publishedAt, name, categories, allCat
                             serializers={serializers}
                         />
                     </div>
-                    <Sidebar categories={categories} allCategories={allCategories} />
+                        <Sidebar categories={categories} allCategories={allCategories} />
                 </div>
             </div>
             </div>

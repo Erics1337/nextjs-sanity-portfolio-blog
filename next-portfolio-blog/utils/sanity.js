@@ -1,6 +1,8 @@
 import React from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 import imageUrlBuilder from '@sanity/image-url'
+import InstagramEmbed from 'react-instagram-embed'
+
 
 
 const imgBuilder = imageUrlBuilder({
@@ -14,6 +16,7 @@ const serializers = {
       link: ({ children, mark }) => <a className='text-primary underline cursor-pointer' href={children.href}>{children}</a>,
       // image: ({ asset }) => <pre>{JSON.stringify(imgBuilder.image(asset._ref), null, 2)}</pre>,
       image: ({ asset }) => <img className='mx-auto pb-3' src={imgBuilder.image(asset._ref)}  />,
+      instagram: ({ node }) => <InstagramEmbed />,
 
   types: {
     block: (props) => {
