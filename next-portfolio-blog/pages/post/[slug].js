@@ -28,6 +28,7 @@ export const Post = ({ title, body, image, publishedAt, name, categories, allCat
     const [open, setOpen] = useState(false)
     const [imageUrl, setImageUrl] = useState('')
 
+
     useEffect(() => {
         // ImageBuilder function
         const imgBuilder = imageUrlBuilder({

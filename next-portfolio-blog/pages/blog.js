@@ -2,23 +2,24 @@
 import Navbar from '../components/Navbar'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
+import { useRecoilState } from "recoil";
 
 // Used for links router.push
 import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import BlogCard from '../components/BlogCard'
+import { blogState } from '../atoms/blogAtom'
 
 
 
 export default function Blog({ posts, allCategories }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
-  const [currentCategory, setCurrentCategory] = useState('')
+  const [currentCategory, setCurrentCategory] = useRecoilState(blogState)
   const [mappedPosts, setMappedPosts] = useState([])
 
   useEffect(() => {
-
         // ImageBuilder function
         const imgBuilder = imageUrlBuilder({
           projectId: 'ulqdo09f',
@@ -49,6 +50,8 @@ export default function Blog({ posts, allCategories }) {
       <Navbar open={open} setOpen={setOpen} />
         <div className="bg-grey-50 flex-grow">
         <div className="container py-16 md:py-20">
+
+
           <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
             Welcome to the blog
           </h2>
@@ -75,31 +78,7 @@ export default function Blog({ posts, allCategories }) {
               }
             </div>
 
-            <div className=''>
-              <nav className={'hidden sm:block pl-3 sticky top-18 text-right'}>
-                <div className={'border-r'}>
-                  <ul className={'flex flex-col mr-3'}>
-                  <h1 onClick={() => setCurrentCategory('')} 
-                      className={`underline font-semibold text-xl py-4 cursor-pointer
-                          ${currentCategory == '' ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
-                          group`}>Post Categories</h1>
-                    {allCategories.map((element, index) => (
-                      <li
-                        key={index}
-                        className={
-                          `text-xl py-4 cursor-pointer
-                          ${currentCategory == element ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
-                          group`
-                        }
-                        onClick={() => setCurrentCategory(element)}
-                      >
-                          {element}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </nav>
-              </div>
+            <Sidebar allCategories={allCategories} />
 
           </div>
         </div>

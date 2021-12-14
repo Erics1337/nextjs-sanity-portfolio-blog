@@ -1,33 +1,41 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import { useRouter } from 'next/router'
+import { blogState } from '../atoms/blogAtom'
+import { useRecoilState } from "recoil";
 
 
-const Sidebar = ({ categories = [], allCategories = [] }) => {
-// This will highlight the categories of the current post
-  const [currentCategory, setCurrentCategory] = useState(categories)
+
+const Sidebar = ({ allCategories = [] }) => {
+  const [currentCategory, setCurrentCategory] = useRecoilState(blogState)
+  const router = useRouter()
+
 
   return (
   <div>
-    <nav className={'hidden sm:block pl-3 sticky top-18 text-right'}>
-      <div className={'border-r'}>
-        <ul className={'flex flex-col mr-3'}>
-        <h1 className={'underline font-semibold'}>Post Categories</h1>
-          {allCategories.map((element, index) => (
-            <li
-              key={index}
-              className={
-                `text-gray-400 hover:text-gray-800 text-xl py-4 cursor-pointer
-                ${categories.includes(element) || currentCategory == element && 'text-primary hover:text-secondary'}
-                group`
-              }
-              onClick={() => setCurrentCategory(element)}
-            >
-                {element}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+  <nav className={'hidden sm:block pl-3 sticky top-18 text-right'}>
+    <div className={'border-r'}>
+      <ul className={'flex flex-col mr-3'}>
+      <h1 onClick={() => {setCurrentCategory(''); router.push('/blog')}}
+          className={`underline font-semibold text-xl py-4 cursor-pointer
+              ${currentCategory == '' ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+              group`}>Post Categories</h1>
+        {allCategories.map((element, index) => (
+          <li
+            key={index}
+            className={
+              `text-xl py-4 cursor-pointer
+              ${currentCategory == element ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+              group`
+            }
+            onClick={() => {setCurrentCategory(element); router.push('/blog')}}
+          >
+              {element}
+          </li>
+        ))}
+      </ul>
     </div>
+  </nav>
+  </div>
   )
 }
 
