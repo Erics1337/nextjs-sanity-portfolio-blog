@@ -12,6 +12,7 @@ import project from './project'
 import author from './author'
 
 import youtube from './youtube'
+import instagramPost from './instagramPost'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,5 +31,6 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     youtube,
+    instagramPost
   ]),
 })

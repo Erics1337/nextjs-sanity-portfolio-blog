@@ -64,5 +64,8 @@ export default {
     {
       type: 'youtube'
     },
+    { 
+      type: "instagramPost" 
+    },
   ],
 }
