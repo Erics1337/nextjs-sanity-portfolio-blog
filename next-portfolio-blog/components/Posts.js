@@ -2,6 +2,8 @@ import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react';
 import PortableText from "react-portable-text"
 import Link from 'next/link';
+import BlogCard from '../components/BlogCard'
+
 
 
 function Posts({ posts = {} }) {
@@ -44,30 +46,7 @@ function Posts({ posts = {} }) {
 
             {/* Posts */}
             {mappedPosts.map((post, index) => (
-                <Link href={`/post/${post.slug.current}`} >
-                  <div className="shadow cursor-pointer">
-                <div
-                  key={index}
-                  style={{ backgroundImage: `url(${post.mainImage})` }}
-                  className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group"
-                >
-                  <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
-                </div>
-                <div className="bg-grey-50 py-6 xl:py-8 px-5">
-                  <span className="font-body font-semibold text-lg text-black block">
-                    {post.title}
-                  </span>
-                  <span className="font-body text-grey-20 pt-2 block">
-                  <PortableText content={post.excerpt} projectId="ulqdo09f" dataset="production" />
-                  <p className="font-body font-bold text-sm md:text-base text-black border-2 border-black hover:bg-white 
-                     block px-6 py-2 my-3 uppercase rounded-full text-center">
-                    Read More
-                  </p>
-                  </span>
-
-                </div>
-              </div>
-            </Link>
+              <BlogCard post={post} content={post?.excerpt} index={index} />
             ))}
            
           </div>

@@ -50,8 +50,6 @@ export default function Blog({ posts, allCategories }) {
       <Navbar open={open} setOpen={setOpen} />
         <div className="bg-grey-50 flex-grow">
         <div className="container py-16 md:py-20">
-
-
           <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
             Welcome to the blog
           </h2>
@@ -59,8 +57,8 @@ export default function Blog({ posts, allCategories }) {
             Check out these posts I wrote
           </h4>
 
-          <div className="flex flex-1 pt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+          <div className="flex flex-1 justify-space-between pt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
               {/* Posts */}
               
               {!Object.keys(mappedPosts).length == 0 ? (mappedPosts.map((post, index) => 

@@ -1,7 +1,7 @@
 import React from "react";
 import InstagramEmbed from "react-instagram-embed";
 
-const accessToken = process.env.ACCESS_TOKEN;
+const accessToken = process.env.ACCESS_TOKEN
 
 const Preview = ({ value }) => {
   const { url } = value;
@@ -15,6 +15,7 @@ const Preview = ({ value }) => {
       url={url}
       maxWidth={480}
       containerTagName="div"
+      hideCaption={true}
       injectScript
     />
   )

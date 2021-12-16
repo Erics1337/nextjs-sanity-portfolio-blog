@@ -14,8 +14,8 @@ function BlogCard({ post=[], content=[], index }) {
                     style={{ backgroundImage: `url(${post.mainImage})` }}
                     className="bg-center bg-cover bg-no-repeat h-72 sm:h-84 lg:h-64 xl:h-72 relative group"
                     >
-                        <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity group-hover:opacity-50 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to"></span>
-                        <span className="font-body font-bold text-sm md:text-base text-white border-2 border-white block px-6 py-2 uppercase rounded-full text-center absolute right-0 bottom-0 mr-4 mb-4">
+                        <span className="bg-cover bg-no-repeat bg-center absolute inset-0 opacity-10 transition-opacity hover:opacity-50 block"></span>
+                        <span className="hover:bg-white hover:text-secondary font-body font-bold text-sm md:text-base text-white border-2 border-white block px-6 py-2 uppercase rounded-full text-center absolute right-0 bottom-0 mr-4 mb-4">
                             Read More
                         </span>
                         </div>

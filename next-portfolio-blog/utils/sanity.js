@@ -13,10 +13,19 @@ const imgBuilder = imageUrlBuilder({
 
 const serializers = {
       h2: (props) => <h2 className={'font-semibold text-2xl mt-5 py-4 text-center'} {...props} />,
-      link: ({ children, mark }) => <a className='text-primary underline cursor-pointer' href={children.href}>{children}</a>,
+      link: (props) => <a className='text-primary underline cursor-pointer' href={props.href} target="_blank">{props.children}</a>,
       // image: ({ asset }) => <pre>{JSON.stringify(imgBuilder.image(asset._ref), null, 2)}</pre>,
-      image: ({ asset }) => <img className='mx-auto pb-3' src={imgBuilder.image(asset._ref)}  />,
-      instagram: ({ node }) => <InstagramEmbed />,
+      image: ({ asset }) => <img className='mx-auto p-3 lg:w-2/3 w-100' src={imgBuilder.image(asset._ref)}  />,
+      instagramPost: ({ url }) =>     
+        <InstagramEmbed
+          clientAccessToken = '602314314308541|88520117e2e8efca9fdfdd7264892086'
+          url={url}
+          className='mx-auto pb-3 lg:w-2/3 w-100'
+          maxWidth={480}
+          containerTagName="div"
+          hideCaption={true}
+          injectScript
+        />,
 
   types: {
     block: (props) => {
@@ -63,7 +72,11 @@ const serializers = {
     strong: (props) =>
       console.log("strong", props) || <strong>{props.children}</strong>,
     em: (props) => console.log("em", props) || <em>{props.children}</em>,
-    code: (props) => console.log("code", props) || <code>{props.children}</code>
+    code: (props) => console.log("code", props) || <code>{props.children}</code>,
+    link: (props) => props.mark.blank ? 
+    (<a href={props.mark.href} target="_blank" rel='noopener noreferer'>{props.children}</a>)
+    : 
+    (<a href={props.mark.href}>{props.children}</a>) 
   }
 }
 

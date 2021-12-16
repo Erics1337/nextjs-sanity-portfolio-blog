@@ -17,7 +17,11 @@ module.exports = {
         colors: {
             transparent: "transparent",
             primary: "#1735fc",
+            primaryHover: "#122AC9",
+            primarySelected: "#6E81FF",
             secondary: "#252426",
+            secondaryHover: "#252426",
+            secondarySelected: "#252426",
             white: '#ffffff',
             black: "#000000",
             yellow: "#f9e71c",

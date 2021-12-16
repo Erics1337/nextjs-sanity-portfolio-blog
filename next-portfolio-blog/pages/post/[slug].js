@@ -9,20 +9,6 @@ import Footer from '../../components/Footer'
 import Sidebar from '../../components/Sidebar'
 import serializers from '../../utils/sanity'
 
-// const urlFor = source => imageUrlBuilder({ projectId: "ulqdo09f", dataset: "production" }).image(source);
-
-// const serializers = {
-//     h2: (props) => <h2 className={'font-semibold text-2xl mt-5 py-4 text-center'} {...props} />,
-//     image: (children) => 
-//         <Image 
-//             src={urlFor('image-ed8bb8a79e51c99ff41692d9953bcae485efd402-1226x410-png')}
-//             width={10}
-//             height={10}
-//         />,
-//     li: ({ children }) => <li className="list-disc">{children}</li>,
-//     normal: ({ children }) => <p className="my-4">{children}</p>
-// }
-    
 
 export const Post = ({ title, body, image, publishedAt, name, categories, allCategories }) => {
     const [open, setOpen] = useState(false)
@@ -48,7 +34,7 @@ export const Post = ({ title, body, image, publishedAt, name, categories, allCat
                 <div className="bg-grey-50 flex-grow">
             <div className={'container'}>
                 {/* If image exists in state then display it */}
-                {imageUrl && <img className={'w-50 py-5'} src={imageUrl} />}
+                {imageUrl && <img className={'w-50 py-5 mx-auto'} src={imageUrl} />}
                 <div className="grid grid-cols-5 gap-3">
                     <div className={'md:col-span-4 col-span-5 justify-center p-5 my-5'}>
                     <h1 className={'text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl'}>{title}</h1>

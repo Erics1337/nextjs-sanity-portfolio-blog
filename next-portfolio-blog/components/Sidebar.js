@@ -5,10 +5,9 @@ import { useRecoilState } from "recoil";
 
 
 
-const Sidebar = ({ allCategories = [] }) => {
+const Sidebar = ({ categories = [], allCategories = [] }) => {
   const [currentCategory, setCurrentCategory] = useRecoilState(blogState)
   const router = useRouter()
-
 
   return (
   <div>
@@ -17,14 +16,14 @@ const Sidebar = ({ allCategories = [] }) => {
       <ul className={'flex flex-col mr-3'}>
       <h1 onClick={() => {setCurrentCategory(''); router.push('/blog')}}
           className={`underline font-semibold text-xl py-4 cursor-pointer
-              ${currentCategory == '' ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+              ${currentCategory == '' ? 'text-primary hover:text-primaryHover' : 'text-grey-10 hover:text-secondaryHover'}
               group`}>Post Categories</h1>
         {allCategories.map((element, index) => (
           <li
             key={index}
             className={
               `text-xl py-4 cursor-pointer
-              ${currentCategory == element ? 'text-primary hover:text-secondary' : 'text-grey-10 hover:text-secondary'}
+              ${categories.includes(element) || currentCategory == element ? 'text-primary hover:text-primaryHover' : 'text-grey-10 hover:text-secondary'}
               group`
             }
             onClick={() => {setCurrentCategory(element); router.push('/blog')}}
