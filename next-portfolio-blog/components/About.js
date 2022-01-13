@@ -1,5 +1,5 @@
-import Image from "next/image"
 import LetsConnect from "./LetsConnect";
+import ThreeSkills from "./three/ThreeSkills";
 
 function About() {
     return (
@@ -22,95 +22,16 @@ function About() {
         </div>
 
         {/* Skills */}
-        <div className="w-full sm:w-3/4 lg:w-2/5 pl-0 lg:pl-12 pt-10 lg:pt-0">
-            <h1 className="text-center font-bold text-3xl pb-5">Skills</h1>
-            <div className="grid grid-cols-2">
-                    <h4 className="font-semibold text-black uppercase my-auto">
-                        HTML & CSS
-                    </h4>
-                <div className="flex py-2 mx-auto">
-                        <Image src="/leftCurlyBracket.svg" height={20} width={20} />
-                        <div className="text-center px-2">
-                            <h3 className="font-bold">
-                                Boootstrap
-                            </h3>
-                            <h3 className="font-bold">
-                                Tailwind
-                            </h3>
-                        </div>
-                        <Image src="/rightCurlyBracket.svg" height={20} width={20} />
+        <div className="w-full sm:w-3/4 lg:w-2/5 lg:pl-12">
+            <h2 className="text-center font-bold text-3xl py-4">Skill Stack</h2>
+            <div className="relative overflow-hidden">
+                <ThreeSkills className='canvas'/>
+                <div className="absolute top-0 left-0 px-6 py-4 h-full flex flex-col justify-center">
+                    <h4 className="mb-3 text-xl font-semibold"><span className='text-purple'>JAM</span>stack</h4>
+                    <h4 className="mb-3 text-xl font-semibold"><span className='text-green'>MERN</span>stack</h4>
+                    <h4 className="mb-3 text-xl font-semibold"><span className='text-blue'>LAMP</span>stack</h4>
                 </div>
-                {/* <div className="h-3 w-full rounded-full bg-lila mt-2">
-                    <div className="h-3 rounded-full bg-primary"
-                         style={{width: 85}}></div>
-                </div> */}
-
-                    <h4 className="font-semibold text-black uppercase my-auto">
-                        Python
-                    </h4>
-                    <div className="flex py-2 mx-auto">
-                        <Image src="/leftCurlyBracket.svg" height={20} width={20} />
-                        <div className="text-center px-2">
-                            <h3 className="font-bold">
-                                Flask
-                            </h3>
-                            <h3 className="font-bold">
-                                Pandas
-                            </h3>
-                        </div>
-                        <Image src="/rightCurlyBracket.svg" height={20} width={20} />
-                    </div>
-
-
-                    <h4 className="font-semibold text-black uppercase my-auto">
-                        Javascript
-                    </h4>
-                    <div className="flex py-2 mx-auto">
-                        <Image src="/leftCurlyBracket.svg" height={20} width={20} />
-                        <div className="text-center px-2">
-                            <h3 className="font-bold">
-                                React
-                            </h3>
-                            <h3 className="font-bold">
-                                Next.js
-                            </h3>
-                        </div>
-                        <Image src="/rightCurlyBracket.svg" height={20} width={20} />
-                    </div>
-
-                    <h4 className="font-semibold text-black uppercase my-auto">
-                        PHP
-                    </h4>
-                    <div className="flex py-2 mx-auto">
-                        <Image src="/leftCurlyBracket.svg" height={20} width={20} />
-                        <div className="text-center px-2">
-                            <h3 className="font-bold">
-                                Drupal
-                            </h3>
-                            <h3 className="font-bold">
-                                Moodle
-                            </h3>
-                        </div>
-                        <Image src="/rightCurlyBracket.svg" height={20} width={20} />
-                    </div>
-
-                    <h4 className="font-semibold text-black uppercase my-auto">
-                        Content Creation
-                    </h4>
-                    <div className="flex py-2 mx-auto">
-                        <Image src="/leftCurlyBracket.svg" height={20} width={20} />
-                        <div className="text-center px-2">
-                            <h3 className="font-bold">
-                                Photoshop
-                            </h3>
-                            <h3 className="font-bold">
-                                Illustrator
-                            </h3>
-                        </div>
-                        <Image src="/rightCurlyBracket.svg" height={20} width={20} />
-                    </div>
-                </div>
-
+            </div>
         </div>
     </div>
 </div>
