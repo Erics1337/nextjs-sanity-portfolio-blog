@@ -10,29 +10,42 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
+    "@react-three/fiber": "^7.0.24",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.19",
+
     "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
     "get-youtube-id": "^1.0.1",
+    "i": "^0.3.7",
     "moment": "^2.29.1",
     "next": "11.1.2",
     "next-sanity-image": "^3.2.1",
+    "next-transpile-modules": "^9.0.0",
     "nodemailer": "^6.7.0",
+    "octokit": "^1.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-instagram-embed": "^3.0.0",
     "react-portable-text": "^0.4.0",
     "react-youtube": "^7.13.1",
-    "recoil": "^0.5.2"
+    "recoil": "^0.5.2",
+    "three": "^0.136.0"
   },
   "devDependencies": {
-    "@octokit/core": "^3.5.1",
-    "autoprefixer": "^10.3.7",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17"
+    "@types/next": "^9.0.0",
+    "@types/node": "^14.14.13",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/three": "^0.103.2",
+    "autoprefixer": "^10.4.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "file-loader": "^6.2.0",
+    "husky": "^4.3.5",
+    "postcss": "^8.4.5",
+    "pretty-quick": "^3.1.0",
+    "tailwindcss": "^3.0.13"
   }
 }
