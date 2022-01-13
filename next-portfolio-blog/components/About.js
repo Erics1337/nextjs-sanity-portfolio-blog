@@ -1,5 +1,6 @@
 import LetsConnect from "./LetsConnect";
 import ThreeSkills from "./three/ThreeSkills";
+import Link from 'next/link';
 
 function About() {
     return (
@@ -23,13 +24,13 @@ function About() {
 
         {/* Skills */}
         <div className="w-full sm:w-3/4 lg:w-2/5 lg:pl-12">
-            <h2 className="text-center font-bold text-3xl py-4">Skill Stack</h2>
+        <Link href='https://stackshare.io/erics1337'><h2 className="cursor-pointer hover:text-primary text-center font-bold text-3xl py-4">My Skill Stack (Technologies I Use)</h2></Link>
             <div className="relative overflow-hidden">
                 <ThreeSkills className='canvas'/>
                 <div className="absolute top-0 left-0 px-6 py-4 h-full flex flex-col justify-center">
-                    <h4 className="mb-3 text-xl font-semibold"><span className='text-purple'>JAM</span>stack</h4>
-                    <h4 className="mb-3 text-xl font-semibold"><span className='text-green'>MERN</span>stack</h4>
-                    <h4 className="mb-3 text-xl font-semibold"><span className='text-blue'>LAMP</span>stack</h4>
+                    <Link href='https://jamstack.wtf/'><h4 className="cursor-pointer hover:text-purple mb-3 text-xl font-semibold"><span className='text-purple'>JAM</span>stack</h4></Link>
+                    <Link href='https://www.mongodb.com/mern-stack'><h4 className="cursor-pointer hover:text-green mb-3 text-xl font-semibold"><span className='text-green'>MERN</span>stack</h4></Link>
+                    <Link href='https://www.ibm.com/cloud/learn/lamp-stack-explained'><h4 className="cursor-pointer hover:text-blue mb-3 text-xl font-semibold"><span className='text-blue'>LAMP</span>stack</h4></Link>
                 </div>
             </div>
         </div>
