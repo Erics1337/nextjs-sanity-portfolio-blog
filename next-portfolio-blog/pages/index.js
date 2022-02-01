@@ -41,6 +41,16 @@ export default function Home({ projects, posts }) {
 
       </button>
       )}
+      <Head>
+        <title>Eric Swanson Software & Web Developer Blog Portfolio </title>
+        <meta name="description" content="Personal website for my career related endeavors, with topics including computer science,
+          web development, software development, professional portfolio, web development projects, experience, career timeline" />
+        <link rel="icon" href="/icons/favicon.ico" />
+        <meta property="og:title" content="Eric Swanson Software Development Personal Website and Portfolio" />
+        <meta property="og:description" content="Professional web developer portfolio, projects, designs, programming skills" />
+        <meta property="og:url" content="https://erics.design" />
+        <meta property="og:type" content="website"></meta>
+      </Head>
       <Navbar open={open} setOpen={setOpen} />
       <Hero />
       <About />
