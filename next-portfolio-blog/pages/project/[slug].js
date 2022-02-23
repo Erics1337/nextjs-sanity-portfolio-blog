@@ -6,7 +6,7 @@ import router from "next/router"
 import Footer from "../../components/Footer"
 import Head from 'next/head';
 
-export const Project = ({ title, body, image, link }) => {
+export const Project = ({ title, body, image, link, slug }) => {
 	const [open, setOpen] = useState(false)
 	const [imageUrl, setImageUrl] = useState("")
 
@@ -36,7 +36,7 @@ export const Project = ({ title, body, image, link }) => {
 					content={`https://erics.design/${slug}`}
 				/>
 				<meta property='og:type' content='website' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/icons/favicon.ico' />
 			</Head>
 			<div className='flex flex-col justify-middle h-screen'>
 				<Navbar open={open} setOpen={setOpen} />

@@ -49,7 +49,7 @@ export const Post = ({
 					content={`https://erics.design/${slug}`}
 				/>
 				<meta property='og:type' content='website' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/icons/favicon.ico' />
 			</Head>
 			<section id='blogPost' className='flex flex-col h-screen '>
 				<Navbar open={open} setOpen={setOpen} />
