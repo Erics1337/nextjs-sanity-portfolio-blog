@@ -25,16 +25,16 @@ function Experience() {
 					/>
 
 					<Timeline
-						image='/tinyFeet.png'
-						dates='2020 - 2021'
-						title='Tiny Feet Toolkit'
-						description='Lead engineer on a team with a Masters of Environmental Management student and a team of engineers from the Colorado School of Mines to create a web application that helps communities build a climate action plan.'
-					/>
-					<Timeline
 						image='/western.png'
 						dates='2017 - 2020'
 						title='Western Colorado University'
 						description='Bachelor of Science (BS), Computer Science'
+					/>
+					<Timeline
+						image='/tinyFeet.png'
+						dates='2020 - 2021'
+						title='Tiny Feet Toolkit'
+						description='Lead engineer on a team with a Masters of Environmental Management student and a team of engineers from the Colorado School of Mines to create a web application that helps communities build a climate action plan.'
 					/>
 					<Timeline
 						image='/beiLogo.png'
