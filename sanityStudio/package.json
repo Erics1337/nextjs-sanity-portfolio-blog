@@ -1,40 +1,40 @@
 {
-  "name": "sanitystudio",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Eric <erics1337@gmail.com>",
-  "license": "UNLICENSED",
-  "scripts": {
-    "start": "sanity start",
-    "test": "sanity check",
-    "build": "sanity build public -y"
-  },
-  "keywords": [
-    "sanity"
-  ],
-  "dependencies": {
-    "@sanity/base": "^2.21.9",
-    "@sanity/core": "^2.22.3",
-    "@sanity/default-layout": "^2.21.9",
-    "@sanity/default-login": "^2.21.9",
-    "@sanity/desk-tool": "^2.21.9",
-    "@sanity/vision": "^2.21.9",
-    "dotenv": "^10.0.0",
-    "get-youtube-id": "^1.0.1",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "react-instagram-embed": "^3.0.0",
-    "react-youtube": "^7.13.1",
-    "styled-components": "^5.2.0"
-  },
-  "devDependencies": {
-    "@sanity/cli": "^2.22.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Erics1337/nextjs-sanity-portfolio-blog.git"
-  }
+	"name": "sanitystudio",
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"main": "package.json",
+	"author": "Eric <erics1337@gmail.com>",
+	"license": "UNLICENSED",
+	"scripts": {
+		"start": "sanity start",
+		"test": "sanity check",
+		"build": "sanity build"
+	},
+	"keywords": [
+		"sanity"
+	],
+	"dependencies": {
+		"@sanity/base": "^2.21.9",
+		"@sanity/core": "^2.22.3",
+		"@sanity/default-layout": "^2.21.9",
+		"@sanity/default-login": "^2.21.9",
+		"@sanity/desk-tool": "^2.21.9",
+		"@sanity/vision": "^2.21.9",
+		"dotenv": "^10.0.0",
+		"get-youtube-id": "^1.0.1",
+		"prop-types": "^15.7",
+		"react": "^17.0",
+		"react-dom": "^17.0",
+		"react-instagram-embed": "^3.0.0",
+		"react-youtube": "^7.13.1",
+		"styled-components": "^5.2.0"
+	},
+	"devDependencies": {
+		"@sanity/cli": "^2.22.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:Erics1337/nextjs-sanity-portfolio-blog.git"
+	}
 }
