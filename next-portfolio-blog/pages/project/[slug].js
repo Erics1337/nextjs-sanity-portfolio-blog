@@ -43,24 +43,32 @@ export const Project = ({ title, body, image, images, link, slug }) => {
 				<div className='bg-grey-50 flex-grow'>
 					<div
 						className={'container grid lg:grid-cols-2 grid-cols-1'}>
-						{/* If image exists in state then display it */}
-						{/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
-						<div
-							className='pl-4 mt-5 h-100 max-w-3xl relative cursor-pointer'
-							onClick={() => router.push(`${link}`)}>
+						<div>
+							{/* If image exists in state then display it */}
+							{/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
 							<div
-								className='absolute inset-0 bg-cover bg-center z-0'
-								style={{ backgroundImage: `url(${imageUrl})` }}
-							/>
-							<div className='p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold'>
-								View project
+								className='pl-4 mt-5 h-100 max-w-3xl relative cursor-pointer p-3'
+								onClick={() => router.push(`${link}`)}>
+								<div
+									className='absolute inset-0 bg-cover bg-center z-0'
+									style={{
+										backgroundImage: `url(${imageUrl})`,
+									}}
+								/>
+								<div className='p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold'>
+									View project
+								</div>
 							</div>
+
+							{images && (
+								<PortableText
+									className='py-3'
+									content={images}
+									projectId='ulqdo09f'
+									dataset='production'
+								/>
+							)}
 						</div>
-						<PortableText
-							content={images}
-							projectId='ulqdo09f'
-							dataset='production'
-						/>
 						<div>
 							<div className={'p-5'}>
 								<h1 className='p-5 text-3xl font-semibold text-center'>
@@ -111,7 +119,7 @@ export const getServerSideProps = async (pageContext) => {
 				title: project.title,
 				date: project.date,
 				image: project.mainImage,
-				images: project.images,
+				images: project.images ?? null,
 				// subhead: project.subhead,
 				body: project.body,
 				tech: project.tech,
