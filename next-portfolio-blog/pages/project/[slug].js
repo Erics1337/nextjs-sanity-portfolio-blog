@@ -1,20 +1,20 @@
-import imageUrlBuilder from "@sanity/image-url"
-import { useState, useEffect } from "react"
-import PortableText from "react-portable-text"
-import Navbar from "../../components/Navbar"
-import router from "next/router"
-import Footer from "../../components/Footer"
-import Head from 'next/head';
+import imageUrlBuilder from '@sanity/image-url'
+import { useState, useEffect } from 'react'
+import PortableText from 'react-portable-text'
+import Navbar from '../../components/Navbar'
+import router from 'next/router'
+import Footer from '../../components/Footer'
+import Head from 'next/head'
 
-export const Project = ({ title, body, image, link, slug }) => {
+export const Project = ({ title, body, image, images, link, slug }) => {
 	const [open, setOpen] = useState(false)
-	const [imageUrl, setImageUrl] = useState("")
+	const [imageUrl, setImageUrl] = useState('')
 
 	useEffect(() => {
 		// ImageBuilder function
 		const imgBuilder = imageUrlBuilder({
-			projectId: "ulqdo09f",
-			dataset: "production",
+			projectId: 'ulqdo09f',
+			dataset: 'production',
 		})
 
 		// Set image in state using the imageBuilder that Sanity.io has given us
@@ -42,7 +42,7 @@ export const Project = ({ title, body, image, link, slug }) => {
 				<Navbar open={open} setOpen={setOpen} />
 				<div className='bg-grey-50 flex-grow'>
 					<div
-						className={"container grid lg:grid-cols-2 grid-cols-1"}>
+						className={'container grid lg:grid-cols-2 grid-cols-1'}>
 						{/* If image exists in state then display it */}
 						{/* {imageUrl && <img className={'mx-auto pl-4 pt-5 w-2/3 max-w-3xl cursor-pointer hover:shadow-lg justify-center'} src={imageUrl} onClick={() => router.push(`${link}`)}/>} */}
 						<div
@@ -56,8 +56,13 @@ export const Project = ({ title, body, image, link, slug }) => {
 								View project
 							</div>
 						</div>
+						<PortableText
+							content={images}
+							projectId='ulqdo09f'
+							dataset='production'
+						/>
 						<div>
-							<div className={"p-5"}>
+							<div className={'p-5'}>
 								<h1 className='p-5 text-3xl font-semibold text-center'>
 									{title}
 								</h1>
@@ -106,6 +111,7 @@ export const getServerSideProps = async (pageContext) => {
 				title: project.title,
 				date: project.date,
 				image: project.mainImage,
+				images: project.images,
 				// subhead: project.subhead,
 				body: project.body,
 				tech: project.tech,
