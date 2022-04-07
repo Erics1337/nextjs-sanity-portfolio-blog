@@ -1,11 +1,45 @@
-import Head from "next/head"
-import Image from "next/image"
-import imageUrlBuilder from "@sanity/image-url"
-import { useState, useEffect } from "react"
-import { useRouter } from "next/router"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-import PortableText from "react-portable-text"
+import Head from 'next/head'
+import Image from 'next/image'
+import BaseBlockContent from '@sanity/block-content-to-react'
+import imageUrlBuilder from '@sanity/image-url'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import PortableText from 'react-portable-text'
+
+const serializers = {
+	types: {
+		block(props) {
+			switch (props.node.style) {
+				case 'h1':
+					return <h1>{props.children}</h1>
+
+				// ...
+
+				default:
+					return <p>{props.children}</p>
+			}
+		},
+	},
+	marks: {
+		inlineicon(props) {
+			switch (props.mark._type) {
+				case 'inlineicon':
+					if (props.mark.asset) {
+						return (
+							<img
+								src={props.mark.asset.url || ''}
+								alt={props.children[0]}
+							/>
+						)
+					} else {
+						return null
+					}
+			}
+		},
+	},
+}
 
 export default function Portfolio({ projects }) {
 	const router = useRouter()
@@ -19,8 +53,8 @@ export default function Portfolio({ projects }) {
 		if (projects.length) {
 			// ImageBuilder function
 			const imgBuilder = imageUrlBuilder({
-				projectId: "ulqdo09f",
-				dataset: "production",
+				projectId: 'ulqdo09f',
+				dataset: 'production',
 			})
 
 			setMappedProjects(
@@ -43,7 +77,9 @@ export default function Portfolio({ projects }) {
 	return (
 		<>
 			<Head>
-				<title>Eric Swanson Software & Web Developer Portfolio Projects</title>
+				<title>
+					Eric Swanson Software & Web Developer Portfolio Projects
+				</title>
 				<meta
 					name='description'
 					content='Personal website for my career related endeavors, with topics including computer science,
@@ -74,18 +110,18 @@ export default function Portfolio({ projects }) {
 						</h4>
 					</div>
 
-					<div className={"flex-none md:flex justify-center mb-auto"}>
+					<div className={'flex-none md:flex justify-center mb-auto'}>
 						{mappedProjects.length ? (
 							mappedProjects.map((project, index) => (
 								<div
 									key={index}
-									className={"m-2 text-center group"}>
+									className={'m-2 text-center group'}>
 									<h1 className='text-1xl sm:text-2xl lg:text-3xl text-primary'>
 										{project.title}
 									</h1>
 									<img
 										className={
-											"m-2 cursor-pointer hover:shadow-lg transition ease-in duration-75 rounded mx-auto"
+											'm-2 cursor-pointer hover:shadow-lg transition ease-in duration-75 rounded mx-auto'
 										}
 										src={project.mainImage}
 										onClick={() =>
@@ -96,12 +132,16 @@ export default function Portfolio({ projects }) {
 									/>
 									<div className='hidden group-hover:block'>
 										<h3>Tech Used: </h3>
-										<PortableText
+										<BaseBlockContent
+											blocks={project.tech}
+											serializers={serializers}
+										/>
+										{/* <PortableText
 											className='inline-flex font-semibold space-x-2'
 											content={project.tech}
 											projectId='ulqdo09f'
 											dataset='production'
-										/>
+										/> */}
 									</div>
 								</div>
 							))
