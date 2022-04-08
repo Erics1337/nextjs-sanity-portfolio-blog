@@ -66,57 +66,65 @@ export default function Portfolio({ projects }) {
 			</Head>
 			<section id='portfolio'>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className='flex flex-col justify-between h-screen bg-grey-50'>
-					{/* <div className={'bg-grey-50'}> */}
-					<div className='py-10'>
-						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
-							Welcome to my Portfolio
-						</h2>
-						<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
-							Check out some of my projects below
-						</h4>
-					</div>
+				<div className='flex flex-col justify-between h-screen bg-grey-50 '>
+					<div className='container mb-5'>
+						{/* <div className={'bg-grey-50'}> */}
+						<div className='py-10'>
+							<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
+								Welcome to my Portfolio
+							</h2>
+							<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+								Check out some of my projects below
+							</h4>
+						</div>
 
-					<div className={'flex-none md:flex justify-center mb-auto'}>
-						{mappedProjects.length ? (
-							mappedProjects.map((project, index) => (
-								<div
-									key={index}
-									className={'m-2 text-center group'}>
-									<h1 className='text-1xl sm:text-2xl lg:text-3xl text-primary'>
-										{project.title}
-									</h1>
-									<img
-										className={
-											'm-2 cursor-pointer hover:shadow-lg transition ease-in duration-75 rounded mx-auto'
-										}
-										src={project.mainImage}
+						<div className='w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 pt-12'>
+							{mappedProjects.length ? (
+								mappedProjects.map((project, index) => (
+									<div
+										key={index}
+										className='transition-all transform hover:scale-105'
 										onClick={() =>
 											router.push(
 												`/project/${project.slug.current}`
 											)
-										}
-									/>
-									<div className='hidden group-hover:block'>
-										<h3>Tech Used: </h3>
-										<BaseBlockContent
-											projectId='ulqdo09f'
-											dataset='production'
-											blocks={project.tech}
-											serializers={serializers}
-										/>
-										{/* <PortableText
-											className='inline-flex font-semibold space-x-2'
-											content={project.tech}
-											projectId='ulqdo09f'
-											dataset='production'
-										/> */}
+										}>
+										<div
+											className='w-full h-100 max-h-100 relative cursor-pointer'
+											onClick={() =>
+												router.push(
+													`/project/${project.slug.current}`
+												)
+											}>
+											<div
+												className='absolute inset-0 bg-cover bg-center z-0'
+												style={{
+													backgroundImage: `url(${project.mainImage})`,
+												}}
+											/>
+											<div className='p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-around items-center text-white font-semibold'>
+												<h1 className='pr-5 text-4xl'>
+													{project.title}
+												</h1>
+												<div className='border-l pl-5 flex'>
+													{/* Tech Used:{' '} */}
+													<BaseBlockContent
+														projectId='ulqdo09f'
+														dataset='production'
+														blocks={project.tech}
+														serializers={
+															serializers
+														}
+													/>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							))
-						) : (
-							<div>No Projects Yet</div>
-						)}
+								))
+							) : (
+								<div>No Projects Yet</div>
+							)}
+						</div>
 					</div>
 					<div className='h-500'></div>
 					<Footer />
