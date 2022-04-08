@@ -2,6 +2,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import ProjectCard from './cards/ProjectCard'
 
 function Portfolio({ projects }) {
 	const router = useRouter()
@@ -49,30 +50,7 @@ function Portfolio({ projects }) {
 				<div className='w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 pt-12'>
 					{/* Projects */}
 					{mappedProjects.map((project, index) => (
-						<div
-							key={index}
-							className='transition-all transform hover:scale-105'
-							onClick={() =>
-								router.push(`/project/${project.slug.current}`)
-							}>
-							<div
-								className='w-full h-100 max-h-100 relative cursor-pointer'
-								onClick={() =>
-									router.push(
-										`/project/${project.slug.current}`
-									)
-								}>
-								<div
-									className='absolute inset-0 bg-cover bg-center z-0'
-									style={{
-										backgroundImage: `url(${project.mainImage})`,
-									}}
-								/>
-								<div className='p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-4xl text-white font-semibold'>
-									{project.title}
-								</div>
-							</div>
-						</div>
+						<ProjectCard project={project} key={index} />
 					))}
 				</div>
 			</div>

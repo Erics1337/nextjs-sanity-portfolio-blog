@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import BaseBlockContent from '@sanity/block-content-to-react'
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import serializers from '../utils/sanity'
+import ProjectCard from '../components/cards/ProjectCard'
 
 export default function Portfolio({ projects }) {
 	const router = useRouter()
@@ -81,45 +79,10 @@ export default function Portfolio({ projects }) {
 						<div className='w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 pt-12'>
 							{mappedProjects.length ? (
 								mappedProjects.map((project, index) => (
-									<div
+									<ProjectCard
+										project={project}
 										key={index}
-										className='transition-all transform hover:scale-105'
-										onClick={() =>
-											router.push(
-												`/project/${project.slug.current}`
-											)
-										}>
-										<div
-											className='w-full h-100 max-h-100 relative cursor-pointer'
-											onClick={() =>
-												router.push(
-													`/project/${project.slug.current}`
-												)
-											}>
-											<div
-												className='absolute inset-0 bg-cover bg-center z-0'
-												style={{
-													backgroundImage: `url(${project.mainImage})`,
-												}}
-											/>
-											<div className='p-2 opacity-0 hover:bg-primary hover:bg-opacity-80 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-around items-center text-white font-semibold'>
-												<h1 className='pr-5 text-4xl'>
-													{project.title}
-												</h1>
-												<div className='border-l pl-5 flex'>
-													{/* Tech Used:{' '} */}
-													<BaseBlockContent
-														projectId='ulqdo09f'
-														dataset='production'
-														blocks={project.tech}
-														serializers={
-															serializers
-														}
-													/>
-												</div>
-											</div>
-										</div>
-									</div>
+									/>
 								))
 							) : (
 								<div>No Projects Yet</div>

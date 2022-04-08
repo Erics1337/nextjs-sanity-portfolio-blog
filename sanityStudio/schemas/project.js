@@ -24,6 +24,11 @@ export default {
 			to: { type: 'author' },
 		},
 		{
+			name: 'link',
+			title: 'External Web Link',
+			type: 'url',
+		},
+		{
 			name: 'mainImage',
 			title: 'Main image',
 			type: 'image',
@@ -32,9 +37,9 @@ export default {
 			},
 		},
 		{
-			name: 'link',
-			title: 'External Web Link',
-			type: 'url',
+			name: 'images',
+			title: 'Images',
+			type: 'blockContent',
 		},
 		{
 			name: 'categories',

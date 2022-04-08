@@ -46,7 +46,6 @@ const serializers = {
 	),
 
 	types: {
-		h3: (props) => <h3 className={'inline-flex'} {...props} />,
 		inlineicon: (props) => (
 			<img
 				className='mx-auto w-10 h-10'
@@ -61,7 +60,12 @@ const serializers = {
 				const level = style.replace(/[^\d]/g, '')
 				return React.createElement(
 					style,
-					{ className: `heading-${level}`, paddingBottom: '0.5em' },
+					{
+						className: `heading-${level}`,
+						paddingBottom: '0.5em',
+						marginLeft: 'auto',
+						marginRight: 'auto',
+					},
 					props.children
 				)
 			}
