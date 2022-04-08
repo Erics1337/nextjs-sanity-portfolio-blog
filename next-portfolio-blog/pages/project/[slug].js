@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar'
 import router from 'next/router'
 import Footer from '../../components/Footer'
 import Head from 'next/head'
+import serializers from '../../utils/sanity'
 
 export const Project = ({ title, body, image, images, link, slug }) => {
 	const [open, setOpen] = useState(false)
@@ -75,6 +76,7 @@ export const Project = ({ title, body, image, images, link, slug }) => {
 									{title}
 								</h1>
 								<PortableText
+									serializers={serializers}
 									content={body}
 									projectId='ulqdo09f'
 									dataset='production'
