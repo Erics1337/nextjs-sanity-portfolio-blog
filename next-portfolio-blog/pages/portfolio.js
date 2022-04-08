@@ -6,40 +6,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import PortableText from 'react-portable-text'
-
-const serializers = {
-	types: {
-		block(props) {
-			switch (props.node.style) {
-				case 'h1':
-					return <h1>{props.children}</h1>
-
-				// ...
-
-				default:
-					return <p>{props.children}</p>
-			}
-		},
-	},
-	marks: {
-		inlineicon(props) {
-			switch (props.mark._type) {
-				case 'inlineicon':
-					if (props.mark.asset) {
-						return (
-							<img
-								src={props.mark.asset.url || ''}
-								alt={props.children[0]}
-							/>
-						)
-					} else {
-						return null
-					}
-			}
-		},
-	},
-}
+import serializers from '../utils/sanity'
 
 export default function Portfolio({ projects }) {
 	const router = useRouter()
@@ -133,6 +100,8 @@ export default function Portfolio({ projects }) {
 									<div className='hidden group-hover:block'>
 										<h3>Tech Used: </h3>
 										<BaseBlockContent
+											projectId='ulqdo09f'
+											dataset='production'
 											blocks={project.tech}
 											serializers={serializers}
 										/>

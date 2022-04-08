@@ -57,15 +57,15 @@ export default {
 							},
 						],
 					},
-					{
-						title: 'Inline Icon',
-						name: 'inlineicon',
-						type: 'image',
-						blockEditor: {
-							icon: FiTag,
-						},
-					},
 				],
+			},
+		},
+		{
+			title: 'Inline Icon',
+			name: 'inlineicon',
+			type: 'image',
+			blockEditor: {
+				icon: FiTag,
 			},
 		},
 		// You can add additional types here. Note that you can't use

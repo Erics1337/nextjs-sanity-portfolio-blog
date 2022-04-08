@@ -32,11 +32,6 @@ export default {
 			},
 		},
 		{
-			name: 'images',
-			title: 'Images',
-			type: 'blockContent',
-		},
-		{
 			name: 'link',
 			title: 'External Web Link',
 			type: 'url',
