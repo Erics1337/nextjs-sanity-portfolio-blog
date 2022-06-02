@@ -49,6 +49,8 @@ const serializers = {
 		inlineicon: (props) => (
 			<img
 				className='mx-auto w-10 h-10'
+				height={60}
+				width={60}
 				src={imgBuilder.image(props.node.asset._ref || '')}
 				alt={props.children[0]}
 			/>
