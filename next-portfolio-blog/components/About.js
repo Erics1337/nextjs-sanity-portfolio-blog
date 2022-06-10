@@ -18,7 +18,7 @@ function About() {
 						<p className='text-grey-20 pt-6 leading-relaxed'>
 							I love to create. I am passionate about what I do,
 							and the projects I work on. My greatest joy is
-							helping others acheive their goals using my skills
+							helping others achieve their goals using my skills
 							and experience. Check out my work, and if you like
 							what I do, let's connect and make something amazing
 							together.
