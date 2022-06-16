@@ -32,7 +32,7 @@ export default function Home({ projects, posts }) {
 	}
 
 	return (
-		<div className='dark:bg-main-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100'>
+		<div className='dark:bg-main-dark-bg dark:text-gray-100 text-gray-700 bg-white'>
 			{showButton && (
 				<button
 					onClick={scrollToTop}

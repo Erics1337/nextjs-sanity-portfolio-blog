@@ -33,7 +33,7 @@ function Posts({ posts = {} }) {
 	}, [posts])
 
 	return (
-		<section id='posts' className='dark:bg-secondary-dark-bg'>
+		<section id='posts' className=''>
 			<div className='container py-16 md:py-20'>
 				<Link href={'/blog'}>
 					<h2 className='font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>

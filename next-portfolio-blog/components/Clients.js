@@ -3,7 +3,7 @@ import Image from 'next/image'
 function Clients() {
   return (
     <section>
-      <div className="bg-grey-50" id="clients">
+      <div className="bg-gray-50" id="clients">
         <div className="container py-16 md:py-20">
           <div className="w-full sm:w-3/4 lg:w-full mx-auto">
             <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">

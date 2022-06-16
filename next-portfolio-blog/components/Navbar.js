@@ -4,7 +4,7 @@ import { MenuIcon, HomeIcon } from '@heroicons/react/solid'
 
 const Navbar = ({ open, setOpen }) => {
 	return (
-		<nav className='dark:bg-main-dark-bg'>
+		<nav className='dark:bg-main-dark-bg dark:text-gray-100 bg-white'>
 			<div className='max-w-6xl mx-auto px-4'>
 				<div className='flex justify-between px-8 py-6'>
 					<div className='flex space-x-4'>

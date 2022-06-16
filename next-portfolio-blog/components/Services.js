@@ -2,7 +2,9 @@ import ServiceBlock from './ServiceBlock'
 
 function Services() {
 	return (
-		<section id='services' className='dark:bg-secondary-dark-bg'>
+		<section
+			id='services'
+			className='dark:bg-secondary-dark-bg bg-gray-100'>
 			<div className='py-16 md:py-20 mx-auto container'>
 				<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 					Here's what I'm good at

@@ -73,7 +73,7 @@ export default function Blog({ posts, allCategories }) {
 				id='portfolio'
 				className='dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100'>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className='bg-grey-50 flex-grow'>
+				<div className='bg-gray-50 flex-grow'>
 					<div className='container py-16 md:py-20'>
 						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 							Welcome to the blog

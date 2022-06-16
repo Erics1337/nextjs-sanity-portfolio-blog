@@ -22,7 +22,7 @@ function BlogCard({ post = [], content = [], index }) {
 						<span className='font-body font-semibold text-lg block'>
 							{post.title}
 						</span>
-						<span className='font-body text-grey-20 pt-2 block'>
+						<span className='font-body text-gray-20 pt-2 block'>
 							<PortableText
 								content={content}
 								serializers={serializers}

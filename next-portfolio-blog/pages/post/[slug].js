@@ -1,14 +1,14 @@
-import imageUrlBuilder from "@sanity/image-url"
-import { useState, useEffect } from "react"
-import PortableText from "react-portable-text"
-import Image from "next/image"
-import moment from "moment"
+import imageUrlBuilder from '@sanity/image-url'
+import { useState, useEffect } from 'react'
+import PortableText from 'react-portable-text'
+import Image from 'next/image'
+import moment from 'moment'
 
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
-import Sidebar from "../../components/Sidebar"
-import serializers from "../../utils/sanity"
-import Head from 'next/head';
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import Sidebar from '../../components/Sidebar'
+import serializers from '../../utils/sanity'
+import Head from 'next/head'
 
 export const Post = ({
 	title,
@@ -18,16 +18,16 @@ export const Post = ({
 	name,
 	categories,
 	allCategories,
-    slug
+	slug,
 }) => {
 	const [open, setOpen] = useState(false)
-	const [imageUrl, setImageUrl] = useState("")
+	const [imageUrl, setImageUrl] = useState('')
 
 	useEffect(() => {
 		// ImageBuilder function
 		const imgBuilder = imageUrlBuilder({
-			projectId: "ulqdo09f",
-			dataset: "production",
+			projectId: 'ulqdo09f',
+			dataset: 'production',
 		})
 
 		// Set image in state using the imageBuilder that Sanity.io has given us
@@ -53,40 +53,40 @@ export const Post = ({
 			</Head>
 			<section id='blogPost' className='flex flex-col h-screen '>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className='bg-grey-50 flex-grow'>
-					<div className={"container"}>
+				<div className='dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-50 flex-grow'>
+					<div className={'container'}>
 						{/* If image exists in state then display it */}
 						{imageUrl && (
 							<img
-								className={"w-50 py-5 mx-auto"}
+								className={'w-50 py-5 mx-auto'}
 								src={imageUrl}
 							/>
 						)}
 						<div className='grid grid-cols-5 gap-3'>
 							<div
 								className={
-									"md:col-span-4 col-span-5 justify-center p-5 my-5"
+									'md:col-span-4 col-span-5 justify-center p-5 my-5'
 								}>
 								<h1
 									className={
-										"text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl"
+										'text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl'
 									}>
 									{title}
 								</h1>
 								<p
 									className={
-										"text-primary text-xs italic py-2"
+										'text-primary text-xs italic py-2'
 									}>
 									{moment(publishedAt)
-										.startOf("day")
+										.startOf('day')
 										.fromNow()}
 								</p>
 								<PortableText
-									className={"justify-center"}
+									className={'justify-center'}
 									imageOptions={{
 										w: 400,
 										h: 240,
-										fit: "max",
+										fit: 'max',
 									}}
 									projectId='ulqdo09f'
 									dataset='production'
@@ -149,7 +149,7 @@ export const getServerSideProps = async (pageContext) => {
 				categories: post.categories,
 				image: post.mainImage,
 				allCategories: allCategories,
-                slug: pageSlug
+				slug: pageSlug,
 			},
 		}
 	}

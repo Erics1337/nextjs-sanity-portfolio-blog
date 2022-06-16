@@ -11,13 +11,13 @@ function Timeline({ image, dates, title, description }) {
 						/>
 					</span>
 					<div className='relative w-full ml-3 hidden md:block'>
-						<span className='h-0.5 bg-grey-70 dark:bg-gray-10 absolute inset-x-0 top-1/2 transform -translate-y-1/2'></span>
+						<span className='h-0.5 bg-gray-70 dark:bg-gray-10 absolute inset-x-0 top-1/2 transform -translate-y-1/2'></span>
 					</div>
 				</div>
 			</div>
 			<div className='md:w-3/5'>
 				<div className='flex md:pl-18 justify-center md:justify-start relative'>
-					<span className='border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block'></span>
+					<span className='border-2 border-gray-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block'></span>
 
 					<div className='mt-1 flex'>
 						<i className='bx bxs-right-arrow text-primary hidden md:block'></i>

@@ -40,7 +40,7 @@ function Contact() {
 	}
 
 	return (
-		<section className='bg-grey-50' id='contact'>
+		<section className='bg-gray-50 dark:bg-secondary-dark-bg' id='contact'>
 			{/* Contact Form */}
 			<div className='container py-16 md:py-20'>
 				{/* Form Group */}
@@ -62,7 +62,7 @@ function Contact() {
 							Have Any Questions?
 						</h4>
 						<div className='w-full sm:w-2/3 mx-auto pt-5 lg:pt-6 text-center'>
-							<p className='font-body text-grey-10'>
+							<p className='font-body text-gray-10'>
 								Lets chat about how I can help you achieve your
 								goals
 							</p>
@@ -70,7 +70,7 @@ function Contact() {
 						<form className='w-full sm:w-3/4 mx-auto pt-10'>
 							<div className='flex flex-col md:flex-row'>
 								<input
-									className='w-full md:w-1/2 mr-3 lg:mr-5 font-body text-black px-4 py-3 border-grey-50 rounded'
+									className='dark:bg-gray-300 w-full md:w-1/2 mr-3 lg:mr-5 font-body text-black px-4 py-3 border-gray-50 rounded'
 									placeholder='Name'
 									type='text'
 									id='name'
@@ -80,7 +80,7 @@ function Contact() {
 									value={name}
 								/>
 								<input
-									className='w-full md:w-1/2 mt-6 md:mt-0 md:ml-3 lg:ml-5 font-body text-black px-4 py-3 border-grey-50 rounded'
+									className='dark:bg-gray-300 w-full md:w-1/2 mt-6 md:mt-0 md:ml-3 lg:ml-5 font-body text-black px-4 py-3 border-gray-50 rounded'
 									placeholder='Email'
 									type='text'
 									id='email'
@@ -91,7 +91,7 @@ function Contact() {
 								/>
 							</div>
 							<textarea
-								className='w-full font-body text-black px-4 py-3 border-grey-50 rounded mt-6 md:mt-8'
+								className='dark:bg-gray-300 w-full font-body text-black px-4 py-3 border-gray-50 rounded mt-6 md:mt-8'
 								placeholder='Message'
 								id='message'
 								cols='30'
@@ -100,7 +100,7 @@ function Contact() {
 									setMessage(e.target.value)
 								}}></textarea>
 							<button
-								className='bg-primary hover:bg-grey-20 font-header font-bold text-lg text-white px-8 py-3 flex justify-center mt-6 rounded items-center uppercase'
+								className='bg-primary hover:bg-gray-20 font-header font-bold text-lg text-white px-8 py-3 flex justify-center mt-6 rounded items-center uppercase'
 								onClick={(e) => {
 									handleSubmit(e)
 								}}>
@@ -117,10 +117,10 @@ function Contact() {
 
 				{/* Phone, Email, Address */}
 				<div className='flex flex-col lg:flex-row pt-16'>
-					<div className='w-full lg:w-1/3 border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8'>
+					<div className='w-full lg:w-1/3 border-l-2 border-t-2 border-r-2 border-b-2 border-gray-60 px-6 py-6 sm:py-8'>
 						<div className='flex items-center'>
-							<i className='bx bx-phone text-grey-40 text-2xl'></i>
-							<p className='font-body font-bold text-grey-40 lg:text-lg uppercase pl-2'>
+							<i className='bx bx-phone text-gray-40 text-2xl'></i>
+							<p className='font-body font-bold text-gray-40 lg:text-lg uppercase pl-2'>
 								My Phone
 							</p>
 						</div>
@@ -128,10 +128,10 @@ function Contact() {
 							(518) 694-2779
 						</p>
 					</div>
-					<div className='w-full lg:w-1/3 border-l-2 lg:border-l-0 border-t-0 lg:border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8'>
+					<div className='w-full lg:w-1/3 border-l-2 lg:border-l-0 border-t-0 lg:border-t-2 border-r-2 border-b-2 border-gray-60 px-6 py-6 sm:py-8'>
 						<div className='flex items-center'>
-							<i className='bx bx-envelope text-grey-40 text-2xl'></i>
-							<p className='font-body font-bold text-grey-40 lg:text-lg uppercase pl-2'>
+							<i className='bx bx-envelope text-gray-40 text-2xl'></i>
+							<p className='font-body font-bold text-gray-40 lg:text-lg uppercase pl-2'>
 								My Email
 							</p>
 						</div>
@@ -139,10 +139,10 @@ function Contact() {
 							erics1337@gmail.com
 						</p>
 					</div>
-					<div className='w-full lg:w-1/3 border-l-2 lg:border-l-0 border-t-0 lg:border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8'>
+					<div className='w-full lg:w-1/3 border-l-2 lg:border-l-0 border-t-0 lg:border-t-2 border-r-2 border-b-2 border-gray-60 px-6 py-6 sm:py-8'>
 						<div className='flex items-center'>
-							<i className='bx bx-map text-grey-40 text-2xl'></i>
-							<p className='font-body font-bold text-grey-40 lg:text-lg uppercase pl-2'>
+							<i className='bx bx-map text-gray-40 text-2xl'></i>
+							<p className='font-body font-bold text-gray-40 lg:text-lg uppercase pl-2'>
 								My Address
 							</p>
 						</div>

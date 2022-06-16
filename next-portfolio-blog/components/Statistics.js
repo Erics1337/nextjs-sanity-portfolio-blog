@@ -54,10 +54,10 @@ function Statistics() {
       </ul> */}
 
 			<div
-				className='bg-top bg-cover bg-no-repeat pb-16 dark:bg-secondary-dark-bg'
+				className='bg-top bg-cover bg-no-repeat pb-16 dark:bg-secondary-dark-bg bg-gray-100'
 				style={{ backgroundImage: 'url(img/experience-figure.png)' }}>
 				<div className='container'>
-					<div className='bg-white/75 dark:bg-secondary-dark-bg/75 w-5/6 md:w-11/12 2xl:w-full mx-auto py-16 lg:py-20 xl:py-24 shadow'>
+					<div className='bg-gray-100/75 dark:bg-secondary-dark-bg/75 w-5/6 md:w-11/12 2xl:w-full mx-auto py-16 lg:py-20 xl:py-24 shadow'>
 						<h1 className='text-center font-semibold text-3xl pb-20 text-primary'>
 							My GitHub Stats
 						</h1>
@@ -75,7 +75,7 @@ function Statistics() {
 									<h1 className='font-body font-bold md:text-4xl text-2xl text-primary'>
 										{data?.public_repos}
 									</h1>
-									<h4 className='font-header font-medium md:text-xl text-base text-grey-dark leading-loose'>
+									<h4 className='font-header font-medium md:text-xl text-base text-gray-dark leading-loose'>
 										Public Repos
 									</h4>
 								</div>
@@ -93,7 +93,7 @@ function Statistics() {
 									<h1 className='font-body font-bold md:text-4xl text-2xl text-primary'>
 										{data?.followers}
 									</h1>
-									<h4 className='font-header font-medium md:text-xl text-base text-grey-dark leading-loose'>
+									<h4 className='font-header font-medium md:text-xl text-base text-gray-dark leading-loose'>
 										Followers
 									</h4>
 								</div>
@@ -111,7 +111,7 @@ function Statistics() {
 									<h1 className='font-body font-bold md:text-4xl text-2xl text-primary'>
 										{data?.following}
 									</h1>
-									<h4 className='font-header font-medium md:text-xl text-base text-grey-dark leading-loose'>
+									<h4 className='font-header font-medium md:text-xl text-base text-gray-dark leading-loose'>
 										Accounts I follow
 									</h4>
 								</div>
@@ -132,7 +132,7 @@ function Statistics() {
 											'years'
 										)}
 									</h1>
-									<h4 className='font-header font-medium md:text-xl text-base text-grey-dark leading-loose'>
+									<h4 className='font-header font-medium md:text-xl text-base text-gray-dark leading-loose'>
 										Years a Member
 									</h4>
 								</div>

@@ -41,7 +41,7 @@ export const Project = ({ title, body, image, images, link, slug }) => {
 			</Head>
 			<div className='flex flex-col justify-middle h-screen'>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className='bg-grey-50 flex-grow'>
+				<div className='dark:bg-secondary-dark-bg dark:text-gray-100 bg-gray-50 text-gray-700 flex-grow'>
 					<div
 						className={'container grid lg:grid-cols-2 grid-cols-1'}>
 						<div>

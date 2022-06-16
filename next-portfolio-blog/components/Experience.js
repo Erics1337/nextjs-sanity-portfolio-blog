@@ -2,7 +2,9 @@ import Timeline from './Timeline'
 
 function Experience() {
 	return (
-		<section id='experience' className='dark:bg-secondary-dark-bg'>
+		<section
+			id='experience'
+			className='dark:bg-secondary-dark-bg bg-gray-100'>
 			<div className='container py-16 md:py-20'>
 				<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 					My work and education experience
@@ -15,7 +17,7 @@ function Experience() {
         </h3> */}
 
 				<div className='w-full lg:w-2/3 mx-auto flex flex-col mt-12 relative'>
-					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-grey-40 dark:bg-gray-10 hidden md:block'></span>
+					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-gray-40 dark:bg-gray-10 hidden md:block'></span>
 
 					<Timeline
 						image='/purchaseCollege.png'
