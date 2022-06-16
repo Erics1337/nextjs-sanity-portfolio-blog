@@ -62,16 +62,18 @@ export default function Portfolio({ projects }) {
 				<meta property='og:url' content='https://erics.design' />
 				<meta property='og:type' content='website'></meta>
 			</Head>
-			<section id='portfolio'>
+			<section
+				id='portfolio'
+				className='dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100'>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className='flex flex-col justify-between h-screen bg-grey-50 '>
-					<div className='container mb-5'>
+				<div className='flex flex-col justify-between'>
+					<div className='container mb-5 pb-5'>
 						{/* <div className={'bg-grey-50'}> */}
 						<div className='py-10'>
 							<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 								Welcome to my Portfolio
 							</h2>
-							<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+							<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 								Check out some of my projects below
 							</h4>
 						</div>

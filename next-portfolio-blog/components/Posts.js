@@ -33,14 +33,14 @@ function Posts({ posts = {} }) {
 	}, [posts])
 
 	return (
-		<section id='posts'>
+		<section id='posts' className='dark:bg-secondary-dark-bg'>
 			<div className='container py-16 md:py-20'>
 				<Link href={'/blog'}>
 					<h2 className='font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 						Check out these posts I wrote
 					</h2>
 				</Link>
-				<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+				<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 					I like to share the knowledge I learn!
 				</h4>
 				<div className='w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10 pt-12'>

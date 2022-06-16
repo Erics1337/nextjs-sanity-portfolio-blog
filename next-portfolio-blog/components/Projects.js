@@ -43,7 +43,7 @@ function Portfolio({ projects }) {
 						Check out my Portfolio
 					</h2>
 				</Link>
-				<h3 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+				<h3 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 					Here are some examples of what I have created
 				</h3>
 

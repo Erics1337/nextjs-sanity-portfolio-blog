@@ -4,7 +4,7 @@ import { MenuIcon, HomeIcon } from '@heroicons/react/solid'
 
 const Navbar = ({ open, setOpen }) => {
 	return (
-		<nav className='bg-gray-100'>
+		<nav className='dark:bg-main-dark-bg'>
 			<div className='max-w-6xl mx-auto px-4'>
 				<div className='flex justify-between px-8 py-6'>
 					<div className='flex space-x-4'>
@@ -20,12 +20,12 @@ const Navbar = ({ open, setOpen }) => {
 						<div className='flex items-center space-x-5'>
 							<Link
 								href='/portfolio'
-								className='hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900'>
+								className='hidden sm:flex py-4 px-3 hover:text-gray-900 dark:hover:text-gray-300'>
 								<span className='btn navBtn'>Portfolio</span>
 							</Link>
 							<Link
 								href='/blog'
-								className='hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900'>
+								className='hidden sm:flex py-4 px-3 text-gray-700 hover:text-gray-900 dark:hover:text-gray-300'>
 								<span className='btn navBtn'>Blog</span>
 							</Link>
 						</div>
@@ -75,7 +75,7 @@ const Navbar = ({ open, setOpen }) => {
 							className='mobile-menu-button'
 							open={open}
 							onClick={() => setOpen(!open)}>
-							<MenuIcon className='h-6 w-6 mr-1 text-black' />
+							<MenuIcon className='h-6 w-6 mr-1' />
 						</button>
 					</div>
 				</div>

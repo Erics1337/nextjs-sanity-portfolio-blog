@@ -11,7 +11,7 @@ function Timeline({ image, dates, title, description }) {
 						/>
 					</span>
 					<div className='relative w-full ml-3 hidden md:block'>
-						<span className='h-0.5 bg-grey-70 absolute inset-x-0 top-1/2 transform -translate-y-1/2'></span>
+						<span className='h-0.5 bg-grey-70 dark:bg-gray-10 absolute inset-x-0 top-1/2 transform -translate-y-1/2'></span>
 					</div>
 				</div>
 			</div>
@@ -22,14 +22,14 @@ function Timeline({ image, dates, title, description }) {
 					<div className='mt-1 flex'>
 						<i className='bx bxs-right-arrow text-primary hidden md:block'></i>
 						<div className='md:pl-8 md:-mt-1'>
-							<span className='font-body font-bold text-grey-40 block'>
+							<span className='font-body font-bold block'>
 								{dates}
 							</span>
 							<span className='font-header font-bold text-xl text-primary uppercase block pt-2'>
 								{title}
 							</span>
 							<div className='pt-2'>
-								<span className='font-body text-black block'>
+								<span className='font-body text-black dark:text-gray-100 block'>
 									{description}
 								</span>
 							</div>

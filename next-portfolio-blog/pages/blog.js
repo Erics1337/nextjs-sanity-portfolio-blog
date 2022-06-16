@@ -1,15 +1,15 @@
-import Navbar from "../components/Navbar"
-import imageUrlBuilder from "@sanity/image-url"
-import { useState, useEffect } from "react"
-import { useRecoilState } from "recoil"
+import Navbar from '../components/Navbar'
+import imageUrlBuilder from '@sanity/image-url'
+import { useState, useEffect } from 'react'
+import { useRecoilState } from 'recoil'
 
 // Used for links router.push
-import { useRouter } from "next/router"
-import Footer from "../components/Footer"
-import Sidebar from "../components/Sidebar"
-import BlogCard from "../components/BlogCard"
-import { blogState } from "../atoms/blogAtom"
-import Head from 'next/head';
+import { useRouter } from 'next/router'
+import Footer from '../components/Footer'
+import Sidebar from '../components/Sidebar'
+import BlogCard from '../components/BlogCard'
+import { blogState } from '../atoms/blogAtom'
+import Head from 'next/head'
 
 export default function Blog({ posts, allCategories }) {
 	const [open, setOpen] = useState(false)
@@ -19,14 +19,14 @@ export default function Blog({ posts, allCategories }) {
 	useEffect(() => {
 		// ImageBuilder function
 		const imgBuilder = imageUrlBuilder({
-			projectId: "ulqdo09f",
-			dataset: "production",
+			projectId: 'ulqdo09f',
+			dataset: 'production',
 		})
 
 		// check each category of each post to see if it matches the current category, if so add it to the mappedPosts array
 		setMappedPosts(
 			posts.map((post) => {
-				if (!currentCategory == "") {
+				if (!currentCategory == '') {
 					if (post.categories.includes(currentCategory)) {
 						return {
 							...post,
@@ -51,9 +51,7 @@ export default function Blog({ posts, allCategories }) {
 	return (
 		<>
 			<Head>
-				<title>
-					Eric Swanson Software & Web Developer Blog 
-				</title>
+				<title>Eric Swanson Software & Web Developer Blog</title>
 				<meta
 					name='description'
 					content='Personal website for my career related endeavors, with topics including computer science,
@@ -71,14 +69,16 @@ export default function Blog({ posts, allCategories }) {
 				<meta property='og:url' content='https://erics.design' />
 				<meta property='og:type' content='website'></meta>
 			</Head>
-			<section id='portfolio' className='flex flex-col h-screen '>
+			<section
+				id='portfolio'
+				className='dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100'>
 				<Navbar open={open} setOpen={setOpen} />
 				<div className='bg-grey-50 flex-grow'>
 					<div className='container py-16 md:py-20'>
 						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 							Welcome to the blog
 						</h2>
-						<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+						<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 							Check out these posts I wrote
 						</h4>
 
@@ -95,7 +95,7 @@ export default function Blog({ posts, allCategories }) {
 												index={index}
 											/>
 										) : (
-											<div className={"w-100"}></div>
+											<div className={'w-100'}></div>
 										)
 									)
 								) : (

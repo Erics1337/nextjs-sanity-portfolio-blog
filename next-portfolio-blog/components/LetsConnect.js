@@ -6,7 +6,7 @@ function LetsConnect() {
 	return (
 		<div className='flex flex-col sm:flex-row justify-center lg:justify-start pt-5 sm:pt-5'>
 			<div className='flex justify-center sm:justify-start items-center pl-0 md:pl-1'>
-				<p className='font-body text-gray-800 text-lg uppercase pr-0'>
+				<p className='font-body text-lg uppercase pr-0'>
 					Let's connect
 				</p>
 
@@ -18,7 +18,7 @@ function LetsConnect() {
 					<div className='px-2 btn navBtn'>
 						<Link href='https://github.com/Erics1337'>
 							<Image
-								className='cursor-pointer'
+								className='cursor-pointer dark:bg-white rounded-md'
 								src='/img/gitHub.png'
 								alt='GitHub'
 								height={30}
@@ -29,7 +29,7 @@ function LetsConnect() {
 					<div className='px-2 btn navBtn'>
 						<Link href='https://www.linkedin.com/in/ericswansondesign/'>
 							<Image
-								className='cursor-pointer'
+								className='cursor-pointer dark:bg-white rounded-md'
 								src='/img/linkedin.png'
 								alt='GitHub'
 								height={30}
@@ -40,7 +40,7 @@ function LetsConnect() {
 					<div className='px-2 btn navBtn'>
 						<Link href='https://twitter.com/don_swan'>
 							<Image
-								className='cursor-pointer'
+								className='cursor-pointer dark:bg-white rounded-md'
 								src='/img/twitter.png'
 								alt='GitHub'
 								height={40}

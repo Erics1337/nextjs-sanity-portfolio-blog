@@ -54,10 +54,10 @@ function Statistics() {
       </ul> */}
 
 			<div
-				className='bg-top bg-cover bg-no-repeat pb-16'
+				className='bg-top bg-cover bg-no-repeat pb-16 dark:bg-secondary-dark-bg'
 				style={{ backgroundImage: 'url(img/experience-figure.png)' }}>
 				<div className='container'>
-					<div className='bg-white w-5/6 md:w-11/12 2xl:w-full mx-auto py-16 lg:py-20 xl:py-24 shadow'>
+					<div className='bg-white/75 dark:bg-secondary-dark-bg/75 w-5/6 md:w-11/12 2xl:w-full mx-auto py-16 lg:py-20 xl:py-24 shadow'>
 						<h1 className='text-center font-semibold text-3xl pb-20 text-primary'>
 							My GitHub Stats
 						</h1>

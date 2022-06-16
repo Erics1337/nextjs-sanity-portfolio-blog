@@ -2,20 +2,20 @@ import Timeline from './Timeline'
 
 function Experience() {
 	return (
-		<section id='experience'>
+		<section id='experience' className='dark:bg-secondary-dark-bg'>
 			<div className='container py-16 md:py-20'>
 				<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 					My work and education experience
 				</h2>
-				<h3 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+				<h3 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 					Here's a timeline of my career
 				</h3>
-				{/* <h3 className="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
+				{/* <h3 className="font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
           Here's what I did before freelancing
         </h3> */}
 
 				<div className='w-full lg:w-2/3 mx-auto flex flex-col mt-12 relative'>
-					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-grey-40 hidden md:block'></span>
+					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-grey-40 dark:bg-gray-10 hidden md:block'></span>
 
 					<Timeline
 						image='/purchaseCollege.png'

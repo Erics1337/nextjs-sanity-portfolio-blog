@@ -58,7 +58,7 @@ function Contact() {
 						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 							Write Me A Message!
 						</h2>
-						<h4 className='font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
+						<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center'>
 							Have Any Questions?
 						</h4>
 						<div className='w-full sm:w-2/3 mx-auto pt-5 lg:pt-6 text-center'>

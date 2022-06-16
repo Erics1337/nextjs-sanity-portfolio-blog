@@ -18,8 +18,8 @@ function BlogCard({ post = [], content = [], index }) {
 							Read More
 						</span>
 					</div>
-					<div className='bg-white py-6 xl:py-8 px-5'>
-						<span className='font-body font-semibold text-lg text-black block'>
+					<div className='py-6 xl:py-8 px-5 bg-white dark:bg-main-dark-bg'>
+						<span className='font-body font-semibold text-lg block'>
 							{post.title}
 						</span>
 						<span className='font-body text-grey-20 pt-2 block'>
