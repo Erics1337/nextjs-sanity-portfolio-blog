@@ -6,7 +6,7 @@ function Timeline({ image, dates, title, description }) {
 					<span className='flex-shrink-0'>
 						<img
 							src={image}
-							className='w-32 h-auto'
+							className='w-32 h-auto bg-gray-200 rounded-md p-2'
 							alt='company logo'
 						/>
 					</span>
