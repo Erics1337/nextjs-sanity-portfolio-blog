@@ -28,7 +28,7 @@ canvas {
 
 @layer components {
 	.navBtn {
-		@apply hidden md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
+		@apply md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
 	}
 
 	.btn {
@@ -36,6 +36,9 @@ canvas {
 	}
 	.hero-image {
 		@apply hero-image-light dark:hero-image-dark;
+	}
+	.mobile-menu-btn {
+		@apply md:hidden;
 	}
 }
 

@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 function LetsConnect() {
 	return (
-		<div className='flex flex-col sm:flex-row justify-center lg:justify-start pt-5 sm:pt-5'>
-			<div className='flex justify-center sm:justify-start items-center pl-0 md:pl-1'>
+		<div className='flex flex-row justify-center lg:justify-start pt-5'>
+			<div className='flex justify-start items-center pl-0 md:pl-1'>
 				<p className='font-body text-lg uppercase pr-0'>
 					Let's connect
 				</p>
 
 				{/* Icons */}
-				<div className='flex items-center justify-center sm:justify-start sm:pt-0'>
+				<div className='flex items-center justify-start pt-0'>
 					<div className='pr-2'>
 						<ChevronRightIcon height={30} width={30} />
 					</div>

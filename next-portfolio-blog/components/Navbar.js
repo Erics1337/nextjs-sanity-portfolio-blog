@@ -70,9 +70,9 @@ const Navbar = ({ open, setOpen }) => {
 					</div>
 
 					{/* Mobile button goes here */}
-					<div className='lg:hidden flex items-center space-x-3'>
+					<div className='lg:hidden flex items-center space-x-3 ml-5'>
 						<button
-							className='mobile-menu-button'
+							className=''
 							open={open}
 							onClick={() => setOpen(!open)}>
 							<MenuIcon className='h-6 w-6 mr-1' />
@@ -83,40 +83,40 @@ const Navbar = ({ open, setOpen }) => {
 
 			{/* Mobile menu */}
 			{open && (
-				<div>
+				<div className='col-span-1 flex flex-wrap pb-4 text-gray-200'>
 					<a
 						href='/#whoAmI'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm bg-gray-500 rounded-md m-2'>
 						Who Am I?
 					</a>
 					<a
 						href='/#services'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Services
 					</a>
 					<a
 						href='/#portfolio'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Portfolio
 					</a>
 					<a
 						href='/#experience'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Experience
 					</a>
 					<a
 						href='/#stats'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Stats
 					</a>
 					<a
 						href='/#posts'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Posts
 					</a>
 					<a
 						href='/#contact'
-						className='block py-2 text-sm hover:bg-gray-200'>
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Contact
 					</a>
 				</div>
