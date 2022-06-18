@@ -32,13 +32,23 @@ function Services() {
 						title='Mobile Development'
 						body='Android and iOS applications using React Native'
 					/>
-					{/* <ServiceBlock image='/img/icon-email-white.svg' hoverImage='/img/icon-email-black.svg' title='Email Marketing' body='Solid marketing tools to help you build your campaign' /> */}
-					{/* <ServiceBlock image='/img/icon-design-white.svg' hoverImage='/img/icon-design-black.svg' title='Graphic Design' body='Custom illustration and icon design' /> */}
 					<ServiceBlock
 						image='/img/icon-graphics-white.svg'
 						hoverImage='/img/icon-graphics-black.svg'
 						title='Web Design'
-						body='Customized site design to match you and your companies aesthetic and mission'
+						body='From wireframes to fully responsive web applications'
+					/>
+					<ServiceBlock
+						image='/img/icon-email-white.svg'
+						hoverImage='/img/icon-email-black.svg'
+						title='Back-end API Development'
+						body='From simple REST APIs to complex microservices'
+					/>
+					<ServiceBlock
+						image='/img/icon-design-white.svg'
+						hoverImage='/img/icon-design-black.svg'
+						title='Custom Branding'
+						body='From logo design to custom branding'
 					/>
 				</div>
 			</div>
