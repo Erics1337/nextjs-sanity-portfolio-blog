@@ -91,7 +91,7 @@ export default function Portfolio({ projects }) {
 							)}
 						</div>
 					</div>
-					<div className='h-500'></div>
+					{/* <div className='h-500'></div> */}
 					<Footer />
 				</div>
 			</section>
