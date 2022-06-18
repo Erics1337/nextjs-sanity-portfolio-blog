@@ -36,14 +36,14 @@ function Experience() {
 						image='/tinyFeet.png'
 						dates='2020 - 2021'
 						title='Tiny Feet Toolkit'
-						description='Lead engineer on a team with a Masters of Environmental Management student and a team of engineers from the Colorado School of Mines to create a web application that helps communities build a climate action plan.'
+						description='Lead engineer on a team with a Masters of Environmental Management student and a group of engineers from the Colorado School of Mines where we developed a web application that helped communities build a climate action plan.'
 					/>
 					<Timeline
 						image='/beiLogo.png'
 						dates='2021 - 2022'
 						title='Business Enterprise Institute'
-						description='Full Stack Developer.  Designed and developed the homepage of the company website.
-                Worked with the sales and marketing teams to build custom tools to aid in client success.'
+						description='Full Stack Developer. Designed and developed the homepage of the company website.
+                Collaborated with the client success and marketing teams to build custom tools to aid in client success. Monitored security, tested performance, and oversaw the development of new features in various internal applications.'
 					/>
 				</div>
 			</div>
