@@ -11,8 +11,8 @@ function About() {
 						Who am I?
 					</h2>
 					<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6'>
-						I'm Eric Swanson, a Full-Stack Web Developer, Designer,
-						and Content Creator
+						I'm Eric Swanson, a Full-Stack Web Developer, Software
+						Engineer, Designer, and Content Creator
 					</h4>
 					<p className='dark:text-gray-300 text-gray-20 pt-6 leading-relaxed'>
 						I love to create. I am passionate about what I do, and
