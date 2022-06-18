@@ -36,7 +36,7 @@ function Posts({ posts = {} }) {
 		<section id='posts' className=''>
 			<div className='container py-16 md:py-20'>
 				<Link href={'/blog'}>
-					<h2 className='font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
+					<h2 className='font-header cursor-pointer hover:text-primaryHover font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 						Check out these posts I wrote
 					</h2>
 				</Link>

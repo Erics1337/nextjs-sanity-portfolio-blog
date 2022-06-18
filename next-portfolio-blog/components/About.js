@@ -28,7 +28,7 @@ function About() {
 				<div className='w-full sm:w-3/4 lg:w-2/5 lg:pl-12'>
 					<iframe
 						src='https://my.spline.design/untitled-8c6348222e8768b117c6ca6d49fd71f0/'
-						frameborder='0'
+						frameBorder='0'
 						width='100%'
 						height='100%'></iframe>
 				</div>

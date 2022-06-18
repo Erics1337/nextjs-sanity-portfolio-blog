@@ -5,7 +5,7 @@ const Spline = () => {
 		<div>
 			<iframe
 				src='https://app.spline.design/file/50601bf9-ded3-465d-88e3-5593376698f1'
-				frameborder='0'
+				frameBorder='0'
 				width='100%'
 				height='100%'></iframe>
 		</div>

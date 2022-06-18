@@ -42,7 +42,7 @@ function ServiceBlock({ image, hoverImage, title, body, link }) {
 				</div>
 			</div>
 			<div className='text-center'>
-				<h3 className='font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-yellow'>
+				<h3 className='font-semibold  text-lg lg:text-xl text-primary uppercase pt-8 group-hover:text-secondary'>
 					{title}
 				</h3>
 				<p className='text-sm md:text-base text-gray pt-4 group-hover:text-white'>

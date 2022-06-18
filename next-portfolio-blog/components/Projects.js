@@ -39,7 +39,7 @@ function Portfolio({ projects }) {
 		<section id='projects' className={'dark:bg-main-dark-bg'}>
 			<div className='container py-16 md:py-20'>
 				<Link href={'/portfolio'}>
-					<h2 className='font-header cursor-pointer hover:text-secondary font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
+					<h2 className='font-header cursor-pointer hover:text-primaryHover font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
 						Check out my Portfolio
 					</h2>
 				</Link>
