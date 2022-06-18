@@ -70,7 +70,7 @@ function Contact() {
 						<form className='w-full sm:w-3/4 mx-auto pt-10'>
 							<div className='flex flex-col md:flex-row'>
 								<input
-									className='dark:bg-gray-300 w-full md:w-1/2 mr-3 lg:mr-5 font-body text-black px-4 py-3 border-gray-50 rounded'
+									className='dark:bg-gray-200 w-full md:w-1/2 mr-3 lg:mr-5 font-body text-black px-4 py-3 border-gray-50 rounded'
 									placeholder='Name'
 									type='text'
 									id='name'
@@ -80,7 +80,7 @@ function Contact() {
 									value={name}
 								/>
 								<input
-									className='dark:bg-gray-300 w-full md:w-1/2 mt-6 md:mt-0 md:ml-3 lg:ml-5 font-body text-black px-4 py-3 border-gray-50 rounded'
+									className='dark:bg-gray-200 w-full md:w-1/2 mt-6 md:mt-0 md:ml-3 lg:ml-5 font-body text-black px-4 py-3 border-gray-50 rounded'
 									placeholder='Email'
 									type='text'
 									id='email'
@@ -91,7 +91,7 @@ function Contact() {
 								/>
 							</div>
 							<textarea
-								className='dark:bg-gray-300 w-full font-body text-black px-4 py-3 border-gray-50 rounded mt-6 md:mt-8'
+								className='dark:bg-gray-200 w-full font-body text-black px-4 py-3 border-gray-50 rounded mt-6 md:mt-8'
 								placeholder='Message'
 								id='message'
 								cols='30'
