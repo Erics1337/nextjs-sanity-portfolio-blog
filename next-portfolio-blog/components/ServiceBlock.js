@@ -23,15 +23,7 @@ function ServiceBlock({ image, hoverImage, title, body, link }) {
 					</div>
 				</div>
 				<div className='dark:block hidden'>
-					<div className='hidden group-hover:block h-full w-full'>
-						<Image
-							src={hoverImage}
-							alt='development icon'
-							height={100}
-							width={100}
-						/>
-					</div>
-					<div className='block group-hover:hidden'>
+					<div className='h-full w-full'>
 						<Image
 							src={image}
 							alt='development icon'
