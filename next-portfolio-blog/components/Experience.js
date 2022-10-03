@@ -45,6 +45,16 @@ function Experience() {
 						description='Full Stack Developer. Designed and developed the homepage of the company website.
                 Collaborated with the client success and marketing teams to build custom tools to aid in client success. Monitored security, tested performance, and oversaw the development of new features in various internal applications.'
 					/>
+					<Timeline
+						image='/ktz_logo_square.webp'
+						dates='2022'
+						title='Kitzuma Cycling Logistics'
+						description='Full Stack Engineer. Contributed to the development of company tools used to manage shipping logistics.
+						Operationalized scripts for 
+						various internal processes that allow admin to interface with the data model behind the proprietary TMS software 
+						built on top of the Salesforce platform. Redesigned company marketing website from the legacy codebase and integrated it with a headless CMS. 
+						Improved various internal processes and made additions to data model.'
+					/>
 				</div>
 			</div>
 		</section>
