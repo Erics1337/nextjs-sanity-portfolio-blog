@@ -12,6 +12,9 @@ import {
 } from 'recoil'
 import * as ga from '../lib/ga'
 
+import { Analytics } from '@vercel/analytics/react';
+
+
 function MyApp({ Component, pageProps }) {
 	// Google Analytics
 	const router = useRouter()
@@ -33,6 +36,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<RecoilRoot>
 			<Component {...pageProps} />
+			<Analytics />
 		</RecoilRoot>
 	)
 }
