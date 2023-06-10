@@ -20,6 +20,7 @@ function Experience() {
 					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-gray-40 dark:bg-gray-10 hidden md:block'></span>
 					<Timeline
 						image='/spruce_logo.png'
+						url='https://www.sprucetech.com'
 						dates='2023'
 						title='Spruce Technologies'
 						description='As a Full Stack Engineer at Spruce Technologies, I served as the administrator for the Delaware River 
@@ -29,6 +30,7 @@ function Experience() {
 					/>
 					<Timeline
 						image='/ktz_logo_square.webp'
+						url='https://www.kitzuma.com'
 						dates='2022'
 						title='Kitzuma Cycling Logistics'
 						description='Full Stack Engineer. Contributed to the development of company tools used to manage shipping logistics.
@@ -39,6 +41,7 @@ function Experience() {
 					/>
 					<Timeline
 						image='/beiLogo.png'
+						url='https://www.exitplanning.com'
 						dates='2021 - 2022'
 						title='Business Enterprise Institute'
 						description='Full Stack Developer. Designed and developed the homepage of the company website.
@@ -46,18 +49,21 @@ function Experience() {
 					/>
 					<Timeline
 						image='/tinyFeet.png'
+						url='https://www.mines.edu/capstoneseniordesign/project/tiny-feet-cap-toolkit'
 						dates='2020 - 2021'
 						title='Tiny Feet Toolkit'
 						description='Lead engineer on a team with a Masters of Environmental Management student and a group of engineers from the Colorado School of Mines where we developed a web application that helped communities build a climate action plan.'
 					/>
 					<Timeline
 						image='/western.png'
+						url='https://www.western.edu'
 						dates='2017 - 2020'
 						title='Western Colorado University'
 						description='Bachelor of Science (BS), Computer Science'
 					/>
 					<Timeline
 						image='/purchaseCollege.png'
+						url='https://www.purchase.edu'
 						dates='2010 - 2014'
 						title='SUNY Purchase College'
 						description='Bachelor of Arts (BA), Liberal Studies w/ focus in Media and Communications and a Minor in Media, Society, and the Arts'

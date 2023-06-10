@@ -1,14 +1,18 @@
-function Timeline({ image, dates, title, description }) {
+import Link from 'next/link'
+
+function Timeline({ image, dates, title, description, url='' }) {
 	return (
 		<div className='flex flex-col md:flex-row text-center md:text-left mt-8'>
 			<div className='md:w-2/5'>
 				<div className='flex justify-center'>
 					<span className='flex-shrink-0'>
-						<img
-							src={image}
-							className='w-32 h-auto bg-gray-200 rounded-md p-2'
-							alt='company logo'
-						/>
+						<Link href={url}>
+							<img
+								src={image}
+								className='w-32 h-auto bg-gray-200 rounded-md p-2 cursor-pointer'
+								alt='company logo'
+							/>
+						</Link>
 					</span>
 					<div className='relative w-full ml-3 hidden md:block'>
 						<span className='h-0.5 bg-gray-70 dark:bg-gray-10 absolute inset-x-0 top-1/2 transform -translate-y-1/2'></span>
@@ -25,9 +29,11 @@ function Timeline({ image, dates, title, description }) {
 							<span className='font-body font-bold block'>
 								{dates}
 							</span>
-							<span className='font-header font-bold text-xl text-primary uppercase block pt-2'>
-								{title}
-							</span>
+							<Link href={url} className='cursor-pointer'>
+								<span className='font-header font-bold text-xl text-primary uppercase block pt-2 cursor-pointer'>
+									{title}
+								</span>
+							</Link>
 							<div className='pt-2'>
 								<span className='font-body text-black dark:text-gray-100 block'>
 									{description}
