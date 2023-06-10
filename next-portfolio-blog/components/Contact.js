@@ -44,6 +44,7 @@ function Contact() {
 			{/* Contact Form */}
 			<div className='container py-16 md:py-20'>
 				{/* Form Group */}
+				{/* 
 				{submitted ? (
 					<div>
 						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center'>
@@ -114,7 +115,7 @@ function Contact() {
 						</form>
 					</div>
 				)}
-
+ */}
 				{/* Phone, Email, Address */}
 				<div className='flex flex-col lg:flex-row pt-16'>
 					<div className='w-full lg:w-1/3 border-l-2 border-t-2 border-r-2 border-b-2 border-gray-60 px-6 py-6 sm:py-8'>
