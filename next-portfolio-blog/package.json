@@ -48,5 +48,8 @@
     "postcss": "^8.4.5",
     "pretty-quick": "^3.1.0",
     "tailwindcss": "^3.0.13"
+  },
+  "volta": {
+    "node": "16.20.0"
   }
 }
