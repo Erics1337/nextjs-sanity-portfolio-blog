@@ -19,6 +19,15 @@ function Experience() {
 				<div className='w-full lg:w-2/3 mx-auto flex flex-col mt-12 relative'>
 					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-gray-40 dark:bg-gray-10 hidden md:block'></span>
 					<Timeline
+						image='/spruce_logo.png'
+						dates='2023'
+						title='Spruce Technologies'
+						description='As a Full Stack Engineer at Spruce Technologies, I served as the administrator for the Delaware River 
+						and Bay Authority website. I also contributed to the development of additional functionalities for CalTrans
+						RebuildingCA project using Node.js. My responsibilities included designing and implementing web interfaces, 
+						developing APIs, and ensuring website performance and stability.'
+					/>
+					<Timeline
 						image='/ktz_logo_square.webp'
 						dates='2022'
 						title='Kitzuma Cycling Logistics'
