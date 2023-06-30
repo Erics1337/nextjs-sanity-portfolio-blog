@@ -18,16 +18,13 @@ function About() {
 							Who am I?
 						</h2>
 						<h4 className='font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6'>
-							I'm Eric Swanson, a Full-Stack Web Developer,
-							Software Engineer, Designer, and Content Creator
+							I'm Eric Swanson, a passionate and versatile Web Developer with expertise across the entire Software Development stack.
 						</h4>
 						<p className='dark:text-gray-300 text-gray-800 pt-6 leading-relaxed'>
-							I love to create. I am passionate about what I do,
-							and the projects I work on. My greatest joy is
-							helping others achieve their goals using my skills
-							and experience. Check out my work, and if you like
-							what I do, let's connect and make something amazing
-							together.
+						From crafting captivating user interfaces to developing robust server-side functionalities, I bring creativity and 
+						technical proficiency to every project. With a collaborative approach, I strive to deliver impactful digital experiences 
+						by leveraging the latest technologies and staying up-to-date with industry trends. 
+						Let's connect and transform your web development goals into reality!
 						</p>
 						<LetsConnect />
 					</div>
