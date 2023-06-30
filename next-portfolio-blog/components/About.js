@@ -12,8 +12,8 @@ function About() {
 						width='100%'
 						height='100%'></iframe>
 				</div>
-				<div className='absolute container py-16 md:py-20 flex flex-col lg:flex-row items-center mx-auto lg:pr-10'>
-					<div className='w-full md:w-3/5 text-center lg:text-left  p-5 bg-gray-300/75 dark:bg-secondary-dark-bg/75 rounded-md lg:bg-transparent'>
+				<div className='absolute container py-12 flex flex-col lg:flex-row items-center mx-auto lg:pr-5'>
+					<div className='w-full lg:w-3/5 text-center lg:text-left p-5 bg-gray-300/75 dark:bg-secondary-dark-bg/75 rounded-md lg:bg-transparent'>
 						<h2 className='font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase'>
 							Who am I?
 						</h2>
@@ -24,7 +24,7 @@ function About() {
 						From crafting captivating user interfaces to developing robust server-side functionalities, I bring creativity and 
 						technical proficiency to every project. With a collaborative approach, I strive to deliver impactful digital experiences 
 						by leveraging the latest technologies and staying up-to-date with industry trends. 
-						Let's connect and transform your web development goals into reality!
+						Let's connect and turn your web development goals into reality!
 						</p>
 						<LetsConnect />
 					</div>
