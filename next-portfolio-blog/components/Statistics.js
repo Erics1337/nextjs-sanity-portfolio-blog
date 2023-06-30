@@ -16,9 +16,9 @@ function Statistics() {
 	useEffect(() => {
 		fetch({
 			url: 'https://api.github.com/users/erics1337',
-			headers: {
-				'User-Agent': 'request',
-			},
+			// headers: {
+			// 	'User-Agent': 'request',
+			// },
 		})
 			.then((response) => {
 				if (response.ok) {
