@@ -26,7 +26,7 @@ function Experience() {
 						description='As a Full Stack Engineer at Spruce Technologies, I served as the administrator for the Delaware River 
 						and Bay Authority website. I also contributed to the development of additional functionalities for CalTrans
 						RebuildingCA project using Node.js. My responsibilities included designing and implementing web interfaces, 
-						developing APIs, and ensuring website performance and stability.'
+						implementing new functionality and integrations, and ensuring website performance and stability.'
 					/>
 					<Timeline
 						image='/ktz_logo_square.webp'
