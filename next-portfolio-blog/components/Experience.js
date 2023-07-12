@@ -52,7 +52,8 @@ function Experience() {
 						url='https://www.mines.edu/capstoneseniordesign/project/tiny-feet-cap-toolkit'
 						dates='2020 - 2021'
 						title='Tiny Feet Toolkit'
-						description='Lead engineer on a team with a Masters of Environmental Management student and a group of engineers from the Colorado School of Mines where we developed a web application that helped communities build a climate action plan.'
+						description='As the lead engineer, I steered a multifaceted team to create a web application aimed at facilitating community-led climate action plans. 
+						My key contributions included the creation of a Google Maps API-based feature and a tailored recommendation tool powered by a custom REST API, alongside optimizing the application database'
 					/>
 					<Timeline
 						image='/western.png'
