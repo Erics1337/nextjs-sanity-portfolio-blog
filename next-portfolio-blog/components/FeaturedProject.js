@@ -15,7 +15,7 @@ function FeaturedProject() {
 						Featured Project
 					</h2>
 				</Link>
-				<h3 className="font-header text-xl font-medium text-center text-gray-900 mt-8 sm:mt-10 md:text-2xl lg:text-3xl">
+				<h3 className="font-header text-xl font-medium text-center text-gray-900 dark:text-gray-300 mt-8 sm:mt-10 md:text-2xl lg:text-3xl">
 					Social Brain Contacts Contact Manager
 				</h3>
 				<div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:gap-10 mb-10">
@@ -29,7 +29,7 @@ function FeaturedProject() {
 						/>
 					</div>
 
-					<div className="p-6 rounded-lg  bg-white">
+					<div className="p-6 rounded-lg">
 						{" "}
 						{/* Enhanced text container */}
 						<p className="text-lg font-medium mb-4">
