@@ -6,6 +6,9 @@
 	"main": "package.json",
 	"author": "Eric <erics1337@gmail.com>",
 	"license": "UNLICENSED",
+	"engines": {
+		"node": "16.x"
+	  }, 
 	"scripts": {
 		"start": "sanity start",
 		"test": "sanity check",
