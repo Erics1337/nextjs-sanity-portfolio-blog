@@ -14,11 +14,12 @@ function Statistics() {
 	//   const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
 
 	useEffect(() => {
-		fetch({
-			url: 'https://api.github.com/users/erics1337',
-			// headers: {
-			// 	'User-Agent': 'request',
-			// },
+		const url = 'https://api.github.com/users/erics1337'
+
+		fetch(url, {
+			headers: {
+				'User-Agent': 'request',
+			},
 		})
 			.then((response) => {
 				if (response.ok) {
