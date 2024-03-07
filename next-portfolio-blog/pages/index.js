@@ -1,24 +1,25 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Services from '../components/Services'
-import Portfolio from '../components/Projects'
-import Clients from '../components/Clients'
-import Experience from '../components/Experience'
-import Statistics from '../components/Statistics'
-import Posts from '../components/Posts'
-import Footer from '../components/Footer'
-import Contact from '../components/Contact'
+import Head from "next/head"
+import Image from "next/image"
+import { useState, useEffect } from "react"
+import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
+import About from "../components/About"
+import Services from "../components/Services"
+import Portfolio from "../components/Projects"
+import Clients from "../components/Clients"
+import Experience from "../components/Experience"
+import Statistics from "../components/Statistics"
+import Posts from "../components/Posts"
+import Footer from "../components/Footer"
+import Contact from "../components/Contact"
+import FeaturedProject from "../components/FeaturedProject"
 
 export default function Home({ projects, posts }) {
 	const [open, setOpen] = useState(false)
 	const [showButton, setShowButton] = useState(false)
 
 	useEffect(() => {
-		window.addEventListener('scroll', () => {
+		window.addEventListener("scroll", () => {
 			if (window.pageYOffset > 300) {
 				setShowButton(true)
 			} else {
@@ -32,38 +33,38 @@ export default function Home({ projects, posts }) {
 	}
 
 	return (
-		<div className='dark:bg-main-dark-bg dark:text-gray-100 text-gray-700 bg-white'>
+		<div className="dark:bg-main-dark-bg dark:text-gray-100 text-gray-700 bg-white">
 			{showButton && (
 				<button
 					onClick={scrollToTop}
-					className='fixed bottom-20 right-20 z-20 bg-transparent hover:bg-primary text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
+					className="fixed bottom-20 right-20 z-20 bg-transparent hover:bg-primary text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+				>
 					&#8679;
 				</button>
 			)}
 			<Head>
-				<title>
-					Eric Swanson Software & Web Developer Blog Portfolio{' '}
-				</title>
+				<title>Eric Swanson Software & Web Developer Blog Portfolio </title>
 				<meta
-					name='description'
-					content='Personal website for my career related endeavors, with topics including computer science,
-          web development, software development, professional portfolio, web development projects, experience, career timeline'
+					name="description"
+					content="Personal website for my career related endeavors, with topics including computer science,
+          web development, software development, professional portfolio, web development projects, experience, career timeline"
 				/>
-				<link rel='icon' href='/icons/favicon.ico' />
+				<link rel="icon" href="/icons/favicon.ico" />
 				<meta
-					property='og:title'
-					content='Eric Swanson Software Development Personal Website and Portfolio'
+					property="og:title"
+					content="Eric Swanson Software Development Personal Website and Portfolio"
 				/>
 				<meta
-					property='og:description'
-					content='Professional web developer portfolio, projects, designs, programming skills'
+					property="og:description"
+					content="Professional web developer portfolio, projects, designs, programming skills"
 				/>
-				<meta property='og:url' content='https://erics.design' />
-				<meta property='og:type' content='website'></meta>
+				<meta property="og:url" content="https://erics.design" />
+				<meta property="og:type" content="website"></meta>
 			</Head>
 			<Navbar open={open} setOpen={setOpen} />
 			<Hero />
 			<About />
+			<FeaturedProject />
 			<Services />
 			<Portfolio projects={projects} />
 			{/* <Clients /> */}
