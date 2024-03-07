@@ -4,7 +4,7 @@ import Link from 'next/link'
 function About() {
 	return (
 		<section id='about'>
-			<div className='flex xl:container'>
+			<div className='flex xl:container my-10'>
 				<div className='md:w-2/3 w-full ml-auto h-128 lg:z-20'>
 					<iframe
 						src='https://my.spline.design/macbookprocopy-07a81e4c79231f1cf6790c7a854d05ad/'
