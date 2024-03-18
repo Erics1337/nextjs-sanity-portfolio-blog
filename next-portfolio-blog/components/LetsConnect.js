@@ -38,7 +38,7 @@ function LetsConnect() {
 						</Link>
 					</div>
 					<div className='px-2 btn navBtn'>
-						<Link href='https://twitter.com/don_swan'>
+						<Link href='https://twitter.com/eric__electric'>
 							<Image
 								className='cursor-pointer dark:bg-white rounded-md'
 								src='/img/twitter.png'
