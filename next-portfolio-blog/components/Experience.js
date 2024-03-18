@@ -19,6 +19,13 @@ function Experience() {
 				<div className='w-full lg:w-2/3 mx-auto flex flex-col mt-12 relative'>
 					<span className='absolute inset-y-0 left-2/5 ml-10 w-0.5 bg-gray-40 dark:bg-gray-10 hidden md:block'></span>
 					<Timeline
+						image='/blu_omega_consulting_logo.jpeg'
+						url='https://www.bluomega.com'
+						dates='2024'
+						title='Blu Omega Consulting'
+						description='Contributed to a federal project team that rebuilt the National Heart, Lung, and Blood Institute website using Agile methodologies and a DevOps toolset on Microsoft Azure.'
+					/>
+					<Timeline
 						image='/spruce_logo.png'
 						url='https://www.sprucetech.com'
 						dates='2023'
