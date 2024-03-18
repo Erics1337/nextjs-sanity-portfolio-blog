@@ -4,7 +4,7 @@ import Link from 'next/link'
 function About() {
 	return (
 		<section id='about'>
-			<div className='flex xl:container my-10'>
+			<div className='flex xl:container mt-28 -mb-80'>
 				<div className='md:w-2/3 w-full ml-auto h-128 lg:z-20'>
 					<iframe
 						src='https://my.spline.design/macbookprocopy-07a81e4c79231f1cf6790c7a854d05ad/'
@@ -29,6 +29,11 @@ function About() {
 						<LetsConnect />
 					</div>
 				</div>
+			</div>
+			<div
+				className='bg-top bg-cover bg-no-repeat pb-16 dark:bg-main-dark-bg/75 bg-gray-100 h-80 -mt-56'
+				style={{ backgroundImage: 'url(img/experience-figure.png)' }}>
+				
 			</div>
 		</section>
 	)
