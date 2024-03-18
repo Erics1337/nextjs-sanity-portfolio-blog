@@ -29,7 +29,7 @@ function FeaturedProject() {
 						/>
 					</div>
 
-					<div className="p-6 rounded-lg">
+					<div className="p-6 rounded-lg my-auto">
 						{" "}
 						{/* Enhanced text container */}
 						<p className="text-lg font-medium mb-4">
