@@ -6,18 +6,15 @@ import Image from "next/image"
 
 function FeaturedProject() {
 	return (
-		<section id="projects" className="dark:bg-main-dark-bg -mt-10">
-						<div
-				className='bg-top bg-cover bg-no-repeat pb-16 dark:bg-main-dark-bg/75 bg-gray-100 h-80 -mb-33 rotate-180'
-				style={{ backgroundImage: 'url(img/experience-figure.png)' }}>
-				
-			</div>
-			<div className="container mx-auto px-4 md:px-0 mb-20">
+		<section id="projects" className="dark:bg-main-dark-bg my-20">
+			<div className="container mx-auto px-4 md:px-0 my-10">
 				{" "}
 				{/* Added container margins for overall spacing */}
-					<h2 className="font-header text-4xl font-semibold tracking-tight text-center text-primary sm:text-5xl lg:text-6xl uppercase">
+				<Link href="/portfolio">
+					<h2 className="font-header text-4xl font-semibold tracking-tight text-center text-primary hover:text-primaryHover sm:text-5xl lg:text-6xl uppercase">
 						Featured Project
 					</h2>
+				</Link>
 				<h3 className="font-header text-xl font-medium text-center text-gray-900 dark:text-gray-300 mt-8 sm:mt-10 md:text-2xl lg:text-3xl">
 					Social Brain Contacts Contact Manager
 				</h3>
