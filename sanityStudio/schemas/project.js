@@ -63,6 +63,11 @@ export default {
 			type: 'blockContent',
 		},
 		{
+			name: 'tech2',
+			title: 'Additional Technologies Used',
+			type: 'blockContent',
+		},
+		{
 			name: 'subhead',
 			title: 'Sub Heading',
 			type: 'blockContent',
