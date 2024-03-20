@@ -78,10 +78,10 @@ export default function Portfolio({ projects }) {
 			</Head>
 			<section
 				id="portfolio"
-				className="dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100"
+				className="dark:bg-secondary-dark-bg dark:text-gray-100 text-gray-700 bg-gray-100 flex flex-col min-h-screen"
 			>
 				<Navbar open={open} setOpen={setOpen} />
-				<div className="flex flex-col justify-between">
+				<div className="flex flex-col justify-between flex-grow">
 					<div className="container mb-5 pb-5">
 						{/* <div className={'bg-gray-50'}> */}
 						<div className="py-10">
