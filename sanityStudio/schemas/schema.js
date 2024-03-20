@@ -25,6 +25,7 @@ export default createSchema({
 		// in the studio.
 		project,
 		post,
+		clients,
 		author,
 		category,
 		// When added to this list, object types can be used as
