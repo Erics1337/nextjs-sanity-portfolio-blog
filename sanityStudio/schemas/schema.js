@@ -10,6 +10,7 @@ import category from './category'
 import post from './post'
 import project from './project'
 import author from './author'
+import clients from './clients'
 
 import youtube from './youtube'
 import instagramPost from './instagramPost'
