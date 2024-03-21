@@ -15,7 +15,7 @@ function Clients({ clients }) {
 		imgBuilder.image(source).width(200).height(100).url() // Adjusted for smaller images
 
 	return (
-		<section className="dark:bg-gray-800 bg-gray-200 py-28">
+		<section id="clients" className="dark:bg-gray-800 bg-gray-200 py-28">
 			<div className="container mx-auto">
 				<div className="mb-24 py-12">
 					<h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-5xl uppercase text-center py-6">

@@ -48,6 +48,11 @@ const Navbar = ({ open, setOpen }) => {
 							<span className='btn navBtn'>Projects</span>
 						</Link>
 						<Link
+							href='/#clients'
+							className='hidden md:flex py-5 px-3'>
+							<span className='btn navBtn'>Clients</span>
+						</Link>
+						<Link
 							href='/#experience'
 							className='hidden lg:flex py-5 px-3'>
 							<span className='btn navBtn'>Experience</span>
@@ -62,11 +67,11 @@ const Navbar = ({ open, setOpen }) => {
 							className='hidden lg:flex py-5 px-3'>
 							<span className='btn navBtn'>Posts</span>
 						</Link>
-						<Link
+						{/* <Link
 							href='/#contact'
 							className='hidden md:flex py-5 px-3'>
 							<span className='btn navBtn'>Contact</span>
-						</Link>
+						</Link> */}
 					</div>
 
 					{/* Mobile button goes here */}
