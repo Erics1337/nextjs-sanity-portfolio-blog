@@ -48,7 +48,10 @@ export const Project = ({
 				<meta name="description" content={`${title}`} />
 				<meta property="og:title" content={`${title}`} />
 				<meta property="og:description" content={`Learn more about ${title}`} />
-				<meta property="og:url" content={`https://ericsdevportfolio.com/${slug}`} />
+				<meta
+					property="og:url"
+					content={`https://ericsdevportfolio.com/${slug}`}
+				/>
 				<meta property="og:type" content="website" />
 				<link rel="icon" href="/icons/favicon.ico" />
 			</Head>
@@ -58,10 +61,10 @@ export const Project = ({
 				<div className="dark:bg-secondary-dark-bg dark:text-gray-100 bg-gray-50 text-gray-700 flex-grow">
 					<div className="container mx-auto px-4 py-8">
 						<div className="flex justify-between items-center mb-8">
-							<div className="flex items-center">
+						<div className="relative md:col-span-4 col-span-5 p-5 my-5">
 								<button
 									onClick={() => router.back()}
-									className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-100"
+									className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-100 absolute left-0 top-0"
 								>
 									<svg
 										className="fill-current mr-2"
@@ -76,7 +79,7 @@ export const Project = ({
 									Back to Portfolio
 								</button>
 							</div>
-							<h1 className="text-3xl font-semibold flex-grow text-center">
+							<h1 className="text-center py-5 font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl">
 								{title}
 							</h1>
 							<div className="w-24 invisible">
@@ -153,7 +156,7 @@ export const Project = ({
 							</div>
 
 							{/* Additional Images */}
-							<div className="lg:w-1/4 flex flex-col space-y-4 p-5">
+							<div className="lg:w-1/4 flex flex-col space-y-4 p-5 cursor-pointer">
 								{images && (
 									<SRLWrapper>
 										<PortableText
