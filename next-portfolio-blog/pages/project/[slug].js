@@ -7,6 +7,7 @@ import Footer from "../../components/Footer"
 import Head from "next/head"
 import serializers from "../../utils/sanity"
 import BaseBlockContent from "@sanity/block-content-to-react"
+import { SRLWrapper } from "simple-react-lightbox"
 
 export const Project = ({
 	title,
@@ -154,12 +155,14 @@ export const Project = ({
 							{/* Additional Images */}
 							<div className="lg:w-1/4 flex flex-col space-y-4 p-5">
 								{images && (
-									<PortableText
-										className=""
-										content={images}
-										projectId="ulqdo09f"
-										dataset="production"
-									/>
+									<SRLWrapper>
+										<PortableText
+											className=""
+											content={images}
+											projectId="ulqdo09f"
+											dataset="production"
+										/>
+									</SRLWrapper>
 								)}
 							</div>
 						</div>

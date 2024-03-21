@@ -37,6 +37,7 @@
     "react-portable-text": "^0.4.0",
     "react-youtube": "^7.13.1",
     "recoil": "^0.5.2",
+    "simple-react-lightbox": "^3.6.9-0",
     "three": "^0.162.0"
   },
   "devDependencies": {
