@@ -10,7 +10,7 @@
   },
   "engines": {
     "node": "16.x"
-  },  
+  },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@react-three/drei": "^8.4.0",
@@ -20,6 +20,8 @@
     "@vercel/analytics": "^0.1.5",
     "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
+    "embla-carousel-autoplay": "^8.0.0",
+    "embla-carousel-react": "^8.0.0",
     "get-youtube-id": "^1.0.1",
     "i": "^0.3.7",
     "moment": "^2.29.1",
@@ -35,7 +37,7 @@
     "react-portable-text": "^0.4.0",
     "react-youtube": "^7.13.1",
     "recoil": "^0.5.2",
-    "three": "^0.136.0"
+    "three": "^0.162.0"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
