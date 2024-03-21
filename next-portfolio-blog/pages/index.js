@@ -91,7 +91,7 @@ export const getServerSideProps = async () => {
 	const posts = await fetch(url2).then((res) => res.json())
 
 	const query3 = encodeURIComponent(
-		`*[ _type == "clients" ] | order(_createdAt asc) [0...3]`
+		`*[ _type == "clients" ] | order(_createdAt asc)`
 	)
 	const url3 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query3}`
 	const clients = await fetch(url3).then((res) => res.json())
