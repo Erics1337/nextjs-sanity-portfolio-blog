@@ -105,6 +105,11 @@ const Navbar = ({ open, setOpen }) => {
 						Portfolio
 					</a>
 					<a
+						href='/#clients'
+						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
+						Clients
+					</a>
+					<a
 						href='/#experience'
 						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Experience
@@ -119,11 +124,11 @@ const Navbar = ({ open, setOpen }) => {
 						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Posts
 					</a>
-					<a
+					{/* <a
 						href='/#contact'
 						className='block py-2 px-5 text-sm  bg-gray-500 rounded-md m-2'>
 						Contact
-					</a>
+					</a> */}
 				</div>
 			)}
 		</nav>
