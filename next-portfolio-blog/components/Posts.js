@@ -47,6 +47,7 @@ function Posts({ posts = {} }) {
 					{/* Posts */}
 					{mappedPosts.map((post, index) => (
 						<BlogCard
+							key={index}
 							post={post}
 							// content={post?.excerpt}
 							index={index}
