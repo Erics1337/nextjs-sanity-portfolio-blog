@@ -14,7 +14,7 @@ import Footer from "../components/Footer"
 import Contact from "../components/Contact"
 import FeaturedProject from "../components/FeaturedProject"
 
-export default function Home({ projects, posts }) {
+export default function Home({ projects, posts, clients }) {
 	const [open, setOpen] = useState(false)
 	const [showButton, setShowButton] = useState(false)
 
@@ -67,7 +67,7 @@ export default function Home({ projects, posts }) {
 			<FeaturedProject />
 			<Services />
 			<Portfolio projects={projects} />
-			{/* <Clients /> */}
+			<Clients clients={clients}/>
 			<Experience />
 			<Statistics />
 			<Posts posts={posts} />
@@ -90,6 +90,14 @@ export const getServerSideProps = async () => {
 	const url2 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query2}`
 	const posts = await fetch(url2).then((res) => res.json())
 
+	const query3 = encodeURIComponent(
+		`*[ _type == "clients" ] | order(_createdAt asc) [0...3]`
+	)
+	const url3 = `https://ulqdo09f.api.sanity.io/v1/data/query/production?query=${query3}`
+	const clients = await fetch(url3).then((res) => res.json())
+
+		console.log('clients', clients);
+
 	if (
 		!projects.result ||
 		!projects.result.length ||
@@ -107,6 +115,7 @@ export const getServerSideProps = async () => {
 			props: {
 				projects: projects.result,
 				posts: posts.result,
+				clients: clients.result,
 			},
 		}
 	}
