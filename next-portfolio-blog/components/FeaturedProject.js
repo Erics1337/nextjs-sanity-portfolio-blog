@@ -6,7 +6,7 @@ import Image from "next/image"
 
 function FeaturedProject() {
 	return (
-		<section id="projects" className="dark:bg-main-dark-bg my-20">
+		<section id="projects" className="dark:bg-gray-800 bg-gray-200 py-20">
 			<div className="container mx-auto px-4 md:px-0 my-10">
 				{" "}
 				{/* Added container margins for overall spacing */}
