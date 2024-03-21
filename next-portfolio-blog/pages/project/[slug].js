@@ -60,7 +60,7 @@ export const Project = ({
 							<div className="flex items-center">
 								<button
 									onClick={() => router.back()}
-									className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-900"
+									className="flex items-center text-sm font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-100"
 								>
 									<svg
 										className="fill-current mr-2"
