@@ -1,10 +1,10 @@
 import Image from "next/image"
 import imageUrlBuilder from "@sanity/image-url"
 import useEmblaCarousel from "embla-carousel-react"
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from "embla-carousel-autoplay"
 
 function Clients({ clients }) {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
+	const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
 	const imgBuilder = imageUrlBuilder({
 		projectId: "ulqdo09f",
@@ -15,11 +15,17 @@ function Clients({ clients }) {
 		imgBuilder.image(source).width(200).height(100).url() // Adjusted for smaller images
 
 	return (
-		<section className="dark:bg-gray-800 bg-gray-200 text-white py-28">
+		<section className="dark:bg-gray-800 bg-gray-200 py-28">
 			<div className="container mx-auto">
-				<h2 className="text-3xl md:text-4xl font-bold text-center mb-24 text-primary py-12">
-					My Latest Clients
-				</h2>
+				<div className="mb-24 py-12">
+					<h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-5xl uppercase text-center py-6">
+						My Latest Clients
+					</h2>
+					<h3 className="font-header font-medium text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
+						I have worked with many clients across various industries helping
+						them achieve their goals
+					</h3>
+				</div>
 				<div ref={emblaRef} className="overflow-hidden embla">
 					<div className="flex -ml-4 embla__container">
 						{Array.isArray(clients) &&
