@@ -46,7 +46,7 @@ export const Post = ({
 				/>
 				<meta
 					property='og:url'
-					content={`https://erics.design/${slug}`}
+					content={`https://ericsdevportfolio.com/${slug}`}
 				/>
 				<meta property='og:type' content='website' />
 				<link rel='icon' href='/icons/favicon.ico' />

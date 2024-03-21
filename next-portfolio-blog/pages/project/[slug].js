@@ -48,7 +48,7 @@ export const Project = ({
 				<meta name="description" content={`${title}`} />
 				<meta property="og:title" content={`${title}`} />
 				<meta property="og:description" content={`Learn more about ${title}`} />
-				<meta property="og:url" content={`https://erics.design/${slug}`} />
+				<meta property="og:url" content={`https://ericsdevportfolio.com/${slug}`} />
 				<meta property="og:type" content="website" />
 				<link rel="icon" href="/icons/favicon.ico" />
 			</Head>

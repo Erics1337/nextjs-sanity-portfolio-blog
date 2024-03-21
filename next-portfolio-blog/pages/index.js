@@ -58,7 +58,7 @@ export default function Home({ projects, posts, clients }) {
 					property="og:description"
 					content="Professional web developer portfolio, projects, designs, programming skills"
 				/>
-				<meta property="og:url" content="https://erics.design" />
+				<meta property="og:url" content="https://ericsdevportfolio.com" />
 				<meta property="og:type" content="website"></meta>
 			</Head>
 			<Navbar open={open} setOpen={setOpen} />

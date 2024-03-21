@@ -66,7 +66,7 @@ export default function Blog({ posts, allCategories }) {
 					property='og:description'
 					content='Professional web developer portfolio, projects, designs, programming skills'
 				/>
-				<meta property='og:url' content='https://erics.design' />
+				<meta property='og:url' content='https://ericsdevportfolio.com' />
 				<meta property='og:type' content='website'></meta>
 			</Head>
 			<section

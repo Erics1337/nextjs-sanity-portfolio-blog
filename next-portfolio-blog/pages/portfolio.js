@@ -73,7 +73,7 @@ export default function Portfolio({ projects }) {
 					property="og:description"
 					content="Professional web development portfolio, projects, designs, programming skills"
 				/>
-				<meta property="og:url" content="https://erics.design" />
+				<meta property="og:url" content="https://ericsdevportfolio.com" />
 				<meta property="og:type" content="website"></meta>
 			</Head>
 			<section
