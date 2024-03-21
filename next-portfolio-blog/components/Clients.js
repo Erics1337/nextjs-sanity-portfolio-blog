@@ -1,38 +1,45 @@
-import Image from 'next/image'
+import Image from "next/image"
+import imageUrlBuilder from "@sanity/image-url"
+import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from 'embla-carousel-autoplay'
 
-function Clients() {
-  return (
-    <section>
-      <div className="bg-gray-50" id="clients">
-        <div className="container py-16 md:py-20">
-          <div className="w-full sm:w-3/4 lg:w-full mx-auto">
-            <h2 className="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">
-              My latest clients
-            </h2>
-            <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
-              <span className="block m-8">
-              <Image
-                src="/beiLogo.png"
-                className="mx-auto block h-12 w-auto"
-                alt="Client Logo"
-                height={80} width={100}
-                />
-              </span>
-              <span className="block m-8">
-              <Image
-                src="/tinyFeet.png"
-                className="mx-auto block h-12 w-auto"
-                alt="Client Logo"
-                height={80} width={250}
-                />
-              </span>
+function Clients({ clients }) {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+	const imgBuilder = imageUrlBuilder({
+		projectId: "ulqdo09f",
+		dataset: "production",
+	})
+
+	const urlFor = (source) =>
+		imgBuilder.image(source).width(200).height(100).url() // Adjusted for smaller images
+
+	return (
+		<section className="dark:bg-gray-800 bg-gray-200 text-white py-28">
+			<div className="container mx-auto">
+				<h2 className="text-3xl md:text-4xl font-bold text-center mb-24 text-primary py-12">
+					My Latest Clients
+				</h2>
+				<div ref={emblaRef} className="overflow-hidden embla">
+					<div className="flex -ml-4 embla__container">
+						{Array.isArray(clients) &&
+							clients.map((client) => (
+								<div key={client._id} className="flex-none ml-4 embla__slide">
+									<Image
+										src={urlFor(client.image)}
+										alt={client.image.alt || "Client Image"}
+										width={200} // Adjusted for smaller display
+										height={100} // Adjusted for smaller display
+										layout="intrinsic"
+										className="rounded-lg" // Adds rounded corners
+									/>
+								</div>
+							))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)
 }
 
 export default Clients
